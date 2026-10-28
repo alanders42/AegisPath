@@ -1,0 +1,455 @@
+{
+  "patch": "7.41f",
+  "checkedAt": "2026-10-28",
+  "gameScriptsCommit": "23bc9a26a701a29fe357025d4ca27fc3697ac5eb",
+  "constantsCommit": "5c0242df9057848fa2036ca3fafe9f2bd4508163",
+  "itemDefinitions": {
+    "abyssal_blade": {
+      "id": 208,
+      "sha256": "5d316aa05bc707c832b9f47698ed7af12960ae34e8040b275b28cca870114bdd"
+    },
+    "aeon_disk": {
+      "id": 256,
+      "sha256": "998887b46f1d9a1713a02b6fabc4ab211084a6c2117d5d608a285a937a076e99"
+    },
+    "aether_lens": {
+      "id": 232,
+      "sha256": "d79ec83d69cda187b13a81695152c4d4f65a935069d415943dd365279b2bf65d"
+    },
+    "aghanims_shard": {
+      "id": 609,
+      "sha256": "3223324fa37c3f1c6a99a99f9f9e1bc29829d7cb6e70c609f0b0c4d6a55d91af"
+    },
+    "arcane_boots": {
+      "id": 180,
+      "sha256": "0bcb136eb102928c14bdfda1ed9f6ea66feaa65f9c17f39a7e579ec4cb2d057c"
+    },
+    "basher": {
+      "id": 143,
+      "sha256": "8b9e84d518d72d04694d8c4993d5eb84ad88fbb6c5c7c9de53d5ce348541814c"
+    },
+    "belt_of_strength": {
+      "id": 17,
+      "sha256": "8c69c96649da8200e0297a6a2816eec6f98ea030e9e4f366a36ae7b646046542"
+    },
+    "bfury": {
+      "id": 145,
+      "sha256": "fcdabcfbd38d5c4903e240dcd311e9c6d8a77a35b5fa5c1f2b9e6a4ed64709cc"
+    },
+    "black_king_bar": {
+      "id": 116,
+      "sha256": "dbdf49c14028ff78cd19a3e0f6e914641e87a85d24ff12c098be876730f469af"
+    },
+    "blade_mail": {
+      "id": 127,
+      "sha256": "aba5243a5d3318621c167a08637895b8599541ef77581d531b60f7bba5c7d384"
+    },
+    "blade_of_alacrity": {
+      "id": 22,
+      "sha256": "a0aa711aff807bfe9fa6f8a2ea478f99cc199c4b9be0b96fd96bbc7418c7d836"
+    },
+    "blades_of_attack": {
+      "id": 2,
+      "sha256": "bfed42c740988e4353d3a097c8d70a73b925edbadb7d940d1dfb10d3527719e4"
+    },
+    "blink": {
+      "id": 1,
+      "sha256": "564216964cda676679e62ff44d1a292d4f003882404bc3b7999d2b2ea9024803"
+    },
+    "blitz_knuckles": {
+      "id": 485,
+      "sha256": "d5f69e2e333bbb60db85279d2a20a6dc334d73afc3422b0449d966a548211965"
+    },
+    "blood_grenade": {
+      "id": 1123,
+      "sha256": "98bd337b397acead4423051e1e6efc151499b5958ec94b6f9196eade019b7f1c"
+    },
+    "boots": {
+      "id": 29,
+      "sha256": "18ba0744add4c8c73c9f4ea96d319faa2ea02113d7da514b344eb86ba62895ae"
+    },
+    "boots_of_elves": {
+      "id": 18,
+      "sha256": "6f55bf5fae93ca185163f38b791aa796708bbe517b3f2e4d5663b768ae8785fa"
+    },
+    "bottle": {
+      "id": 41,
+      "sha256": "0e4e6bb6a6c21cd27bcf4feebadbc86171520a10b59388f31a9e9db9fe855bdc"
+    },
+    "branches": {
+      "id": 16,
+      "sha256": "38ff7cbb004737517c16dddd0ce64558cab351c94c1cb64bce2f1b1bc5ed23eb"
+    },
+    "broadsword": {
+      "id": 3,
+      "sha256": "4ce664d2b9d4dd7e1ffd8146548286dbbc4be62161636a8beb4132642ba1dd37"
+    },
+    "butterfly": {
+      "id": 139,
+      "sha256": "23a2f79889f6543a8645884388ee77ddac64726581c4053563a03eee16c69bfa"
+    },
+    "chainmail": {
+      "id": 4,
+      "sha256": "b61026911a5388e291534ad39fc86c8bfdc8aaaaab3ccb0c7cfe6030a5eb5dfb"
+    },
+    "chasm_stone": {
+      "id": 1872,
+      "sha256": "38d95b149d8998f5cd40e4d5c165e8ded028d6fa604d630c6edd8d8826527550"
+    },
+    "circlet": {
+      "id": 20,
+      "sha256": "48304e449d22f61f726a7b24175d32a1473f35c9bf78d80a82dfcf51361dd009"
+    },
+    "clarity": {
+      "id": 38,
+      "sha256": "e14e1c7eecf68f7d1ed97f96993a59210d5217c5e5f89b1ee6fd7e0e706f478d"
+    },
+    "claymore": {
+      "id": 5,
+      "sha256": "489953aa011af3606f042a4a1645e1e15589b00fe2cde62de359dd325ddfd498"
+    },
+    "cloak": {
+      "id": 31,
+      "sha256": "b6cd091a05a1b90c6a3570e52d0916725f9347f945551ffd650accb7620c075a"
+    },
+    "cyclone": {
+      "id": 100,
+      "sha256": "25869396caa4d4e0321ab263471651380c7a077473f981cc41428e9c05ed5534"
+    },
+    "demon_edge": {
+      "id": 51,
+      "sha256": "4935467bb5a719265bec9cb6cf0f60405bd6b1b7428798b2555e0933fedb143e"
+    },
+    "diadem": {
+      "id": 1122,
+      "sha256": "0f5884beb51224458788a8efd82cd229b9285f76a42a40fede28bc541a770ae9"
+    },
+    "diffusal_blade": {
+      "id": 174,
+      "sha256": "540f5b9ad9e47dc36434ffa9bd5c7b96d69f2d9f4e18e27d6deabbf4bc30d0a4"
+    },
+    "disperser": {
+      "id": 1097,
+      "sha256": "837330ebbfa7f592f0810165571ceee45da97b8cc7da39b7ef548527b977b43b"
+    },
+    "dust": {
+      "id": 40,
+      "sha256": "1d330e8b2439496a4bcd3ae8c2d665df44a118459aa0f2dfc7739fd778b6978b"
+    },
+    "eagle": {
+      "id": 52,
+      "sha256": "b199913fd2919d6e569fa64eb788799e240c5d3e97eb5996480831be3c56dfd5"
+    },
+    "enchanted_mango": {
+      "id": 216,
+      "sha256": "23553061461b44614b266a4059c9609bed5a4e88cc86b3ca7e7af5dfbbcc464d"
+    },
+    "energy_booster": {
+      "id": 59,
+      "sha256": "dea41ba3ec6fdc5d517e62105478a128c2722bb12af648cc27b5bdd92e8faf40"
+    },
+    "faerie_fire": {
+      "id": 237,
+      "sha256": "6ed7fff4ec9f77063e8dffde37e3f19e84ee348dc2818b23ed87c97abf54b329"
+    },
+    "flask": {
+      "id": 39,
+      "sha256": "8f45b95349290d7dc72538e8b590ce99feaf4bab9535ee6366c29bf8ecd0176e"
+    },
+    "fluffy_hat": {
+      "id": 593,
+      "sha256": "0f4708350dcfbb5a476756b63d4f982103d6d4fc3179d33dbc9a05f98f68bbd7"
+    },
+    "force_staff": {
+      "id": 102,
+      "sha256": "cc21f3f42ad916290ff94a22f064425d260ac1bf606aead62a31cb429ca1d1c0"
+    },
+    "ghost": {
+      "id": 37,
+      "sha256": "67da01f5999b6684ea77fae5f79677009b26cef4d9e769ed248aeec41d209820"
+    },
+    "glimmer_cape": {
+      "id": 254,
+      "sha256": "e8392a84bef9b5482772979cadc1c4fc448582ddf442a38e1e0f5a3ccc2aeadb"
+    },
+    "gloves": {
+      "id": 25,
+      "sha256": "c6d3d883e89c5262d892110865f7be7fad8d2d69aeb9e88c5cc01bd7a2806833"
+    },
+    "heart": {
+      "id": 114,
+      "sha256": "b839f474e521c596804d549c213fa02913bd11e594f804b2d0d0e395640ef061"
+    },
+    "javelin": {
+      "id": 7,
+      "sha256": "ec0e5c79fe5815501bcc099464bc55c21810c08e23d583f4a93508b5365c209c"
+    },
+    "lifesteal": {
+      "id": 26,
+      "sha256": "233e9c119ffcffe62e4fafe3c10c32ba38984f68dd53e5c4f1a35e788f759f5e"
+    },
+    "lotus_orb": {
+      "id": 226,
+      "sha256": "793746404c2fe06b4b24f7d3f860ab7415b669540e6882f3816f56a50594d150"
+    },
+    "magic_stick": {
+      "id": 34,
+      "sha256": "f571605de970449d061db8a9785cbeaee44d95659d82cda9f7e4e4962780d8b8"
+    },
+    "magic_wand": {
+      "id": 36,
+      "sha256": "02df09bbff12e548414c931c4780115308bfbafac747d68d2780e9d2ca56345f"
+    },
+    "manta": {
+      "id": 147,
+      "sha256": "553951cbe3cdf6edf2051905d7278aab3230e545fc13321215068f37a21c7605"
+    },
+    "mantle": {
+      "id": 15,
+      "sha256": "6ca935ac7769f76af38ed2164491929c4e3b6be2e5854de7c45788be399bcedc"
+    },
+    "mithril_hammer": {
+      "id": 8,
+      "sha256": "a7c1dceb054ba96c70936e49dfef781eb949781312b1e8f78b076bc53b21f96b"
+    },
+    "monkey_king_bar": {
+      "id": 135,
+      "sha256": "d1787d4370d0b267bc04683224b2a09ed02b257b23667699f7f97e8b413d8e1f"
+    },
+    "mystic_staff": {
+      "id": 58,
+      "sha256": "7fedcd139e702e3f0b60119eb843e7a168e9c1b50dcbe7c03c3fe0b7c0df0d84"
+    },
+    "octarine_core": {
+      "id": 235,
+      "sha256": "ac1297bf1d9a27bef55016bbd4d24d5e362c546c859efb94e5bb666a610dcc60"
+    },
+    "ogre_axe": {
+      "id": 21,
+      "sha256": "c92ded72329e5bd178d9061427fa24eeceae3d0aac94ba5bf6ae823485830494"
+    },
+    "orb_of_frost": {
+      "id": 1575,
+      "sha256": "4d715f5c7597d02c960323f859bea392dff68afd82e80815f0a7c4bf455d932e"
+    },
+    "orb_of_venom": {
+      "id": 181,
+      "sha256": "f95751a4c22b876be48e6b6de3a4a7116a020e3b95d9ec5a1da35ab703f3aa26"
+    },
+    "overwhelming_blink": {
+      "id": 600,
+      "sha256": "6fe5c2c718e093d0c63293728bf32a53d3fc97b7a53d2aa9a9361fa49492a7ae"
+    },
+    "pers": {
+      "id": 69,
+      "sha256": "672d7071e43e8e7b774e23419d90180e458fa5caf857d14ac719e05c2429541f"
+    },
+    "phase_boots": {
+      "id": 50,
+      "sha256": "e098d44f3cfc5153df39725f11c1ab348e421fe91b28efb91751a0c87a065b2c"
+    },
+    "pipe": {
+      "id": 90,
+      "sha256": "84700b7270d45d7769fe1907f5549008a2422dbad931316a4d37e338958de1f3"
+    },
+    "platemail": {
+      "id": 9,
+      "sha256": "6e872b0325b06cbeb5eed2a004b42c38fcba428c06f3dc30e3e985a2c11701f8"
+    },
+    "point_booster": {
+      "id": 60,
+      "sha256": "3d6ff4103f3ae05007265cbdf37bd064c4b4cc152fa9b5101015bf5b947d5ad8"
+    },
+    "power_treads": {
+      "id": 63,
+      "sha256": "892422bc1036bbf9e323042e1e20802557d95de902b3d3da0f6bc90e4d27c3b1"
+    },
+    "quelling_blade": {
+      "id": 11,
+      "sha256": "4e60bfe4dcdaa9e3cc26c421a70148e2b53ddea90e90dae82f936ce001370265"
+    },
+    "reaver": {
+      "id": 53,
+      "sha256": "28f02e70baf4651e1e4d3cb423c6b24a25e88c30c6d9470f8c25d231ec735a42"
+    },
+    "ring_of_basilius": {
+      "id": 88,
+      "sha256": "1ba795c71d969d1d28de95935847aab31e7bd45fab64872f946b5aa3cb69c499"
+    },
+    "ring_of_health": {
+      "id": 56,
+      "sha256": "5ae05af255c0390ca22d58c3f6e68e38422c405b40b849ff4546e6eb55d9609f"
+    },
+    "ring_of_protection": {
+      "id": 12,
+      "sha256": "539d1b6cbb043f05501a26327fbc1f427816b6b0acd211d858d6773459ba170f"
+    },
+    "ring_of_tarrasque": {
+      "id": 279,
+      "sha256": "bde3c468dd6115a8f286088cc1b4a572910841f1d1b44ca0aa1a3bfdf6757155"
+    },
+    "robe": {
+      "id": 19,
+      "sha256": "6ab54e24944f8c600f1dda0fca0553daa5195ace05f6cf1f8b488394d48c8848"
+    },
+    "sange": {
+      "id": 162,
+      "sha256": "6d52df224196fb2a7b989597df17f322bb43dd3f0980622dc52c7e912aec227b"
+    },
+    "satanic": {
+      "id": 156,
+      "sha256": "f87bf57437f7aeec5ad3a89ad933540584c16b8725ba0ed0867f11aff8547838"
+    },
+    "shadow_amulet": {
+      "id": 215,
+      "sha256": "b649867953665c0ad1c61ddc4b3147ab0363e1d6ecb25d66cc5f911f9cb6fb93"
+    },
+    "shawl": {
+      "id": 1848,
+      "sha256": "e007cb016af149ce16f2bbc8339e83578ef308d07603b99cb3135d620ae70269"
+    },
+    "sheepstick": {
+      "id": 96,
+      "sha256": "14dea9b07e2a741bb198c45289a12d41eac6cca0733860aec019c112cefda1a7"
+    },
+    "shivas_guard": {
+      "id": 119,
+      "sha256": "41609e94e68e3e81c6ffd9e13dddc26a5f30b66fccc06d3062b895a019b5a69f"
+    },
+    "skadi": {
+      "id": 160,
+      "sha256": "85935e1252d728e850e3d1ffe93e8f078c8a5991fd6b985acead7402a41aae29"
+    },
+    "slippers": {
+      "id": 14,
+      "sha256": "c80a4e8bc9a415cba8a78a041d6e37f16ed9da81f183c14a261f331ba6bb9d0f"
+    },
+    "sobi_mask": {
+      "id": 28,
+      "sha256": "8d630b2805ab5682ca9cea8db7d4a16857af0a628deec44bd9f7047b5f10ef4e"
+    },
+    "soul_booster": {
+      "id": 129,
+      "sha256": "90bc4f440308acb75daa92970b32c54e432446a8886031ee01d08ece491c1f1b"
+    },
+    "sphere": {
+      "id": 123,
+      "sha256": "d5c71935123249863247b8a561264307c4b3f62c15a06f50e98fa9adc4adceab"
+    },
+    "splintmail": {
+      "id": 1847,
+      "sha256": "086ce500f8d125af240ee9b35b28f7f385b06e248f7a2e4b0c085f4c96c6b84d"
+    },
+    "staff_of_wizardry": {
+      "id": 23,
+      "sha256": "145aca2c4dc8984bc70a10115b9e5d81d7ac847dfa6dc70e2d2410ce8876e64f"
+    },
+    "talisman_of_evasion": {
+      "id": 32,
+      "sha256": "78464fc747780f180692047f34e19a28e5019d8c1d0b02345c62f92d99778ff5"
+    },
+    "tango": {
+      "id": 44,
+      "sha256": "0190b44c04a6d1c059eac88a69e7a726177efb9972f84b1d94afd2163431cdd2"
+    },
+    "tiara_of_selemene": {
+      "id": 1802,
+      "sha256": "45e0114d15359c5d888aa86d889668250a06bfb0003f7541a042875571a02925"
+    },
+    "tpscroll": {
+      "id": 46,
+      "sha256": "ee798f84c7d3713a7082e5046ab5d0ebeca87921367afdb7ef7fc6e444159cab"
+    },
+    "travel_boots": {
+      "id": 48,
+      "sha256": "df3a4f9b061e35126455923974862b89d16948181ea9a2ec264ab58dcb9e71fa"
+    },
+    "ultimate_orb": {
+      "id": 24,
+      "sha256": "e991fa4a9b1649c56bb8197028263825f0288ed4c0d81ec07a9626f388b7d5b6"
+    },
+    "ultimate_scepter": {
+      "id": 108,
+      "sha256": "762b9b42b0c5896a8695dfa5021f9d06b0bc7de8ba4a4e9db2fffb79124922d7"
+    },
+    "vitality_booster": {
+      "id": 61,
+      "sha256": "8aa0f431046ec1dcb9662ed3eac3c787eb15c47e71d8c318d84a4dec195c09fc"
+    },
+    "void_stone": {
+      "id": 57,
+      "sha256": "08cb88c095b36f8cbff92ab6d7d66a031a49d9299d9d2970364cb0292bd65831"
+    },
+    "ward_observer": {
+      "id": 42,
+      "sha256": "fece7fc8a045044715dfd11f7e762098ede64bdb6e024cdcdfb2745898d46d69"
+    },
+    "ward_sentry": {
+      "id": 43,
+      "sha256": "6e1bb46ee8c255e617cbdfcc8b7b23f13588f123c86f35c90d9abfba66110c28"
+    },
+    "wind_lace": {
+      "id": 244,
+      "sha256": "314cfbf9abc12dbade91db4c81d3845829c67b3973aa26dfc2db53d63106ddb3"
+    },
+    "wizard_hat": {
+      "id": 1849,
+      "sha256": "54405d525d7a8a073dfa818bd9b966ec34ee84fdafee75c8087c51568fb25cfc"
+    },
+    "yasha": {
+      "id": 170,
+      "sha256": "e45a445b93aa7fa0843a08eec8b47f24bdf23fcedf34d2faa5c56af115ed1747"
+    },
+    "null_talisman": {
+      "id": 77,
+      "sha256": "1750b142a1cf5b3ea31f4e2fadd1b726e16caa609c4e52148635542a5e20ba91"
+    }
+  },
+  "heroDefinitions": {
+    "2": {
+      "sha256": "caf919569822289dc8e6ea7f9fd74f75f06f8decaec048cd79dd4f9de85c70f8"
+    },
+    "5": {
+      "sha256": "5eb71d849027adebce40da5dec9766ed038b03514cf94c86349bfb2c12022a5a"
+    },
+    "6": {
+      "sha256": "9ff9eca5240eeb52d65bd166f1c4c6cbf37f483862aa71369bb9b22961b94547"
+    },
+    "8": {
+      "sha256": "5ac24114da6c41330fedde7274e12fa35a33b5e647fdcad85a6243b18722db30"
+    },
+    "12": {
+      "sha256": "44e8a0691ed379b11c9b99454ebb866fc23575189ffa9aedca5a44a480731be3"
+    },
+    "17": {
+      "sha256": "7f09aeb181945096979b85d16a7921a58d6dfe5a4a21684fd2a500eb2259e2b9"
+    },
+    "25": {
+      "sha256": "8398d313feaed165904aae89ad4d270c284fdcf3017b484a3f439dfb38f50dcf"
+    },
+    "32": {
+      "sha256": "a10371633c365dbc665390c2c20905e022a0d509b8ebf1b573e7e23ac3f201bc"
+    },
+    "35": {
+      "sha256": "f02cff6c6ff653b4ac469b7b959ca2d62568024e48fbe36992336d92283719b5"
+    },
+    "36": {
+      "sha256": "12882e759edf591fc87395c4f8e2d73d55776e27b3524c0afbc05f94d96c9ebc"
+    },
+    "44": {
+      "sha256": "540ebce00ab4cb6a3c37dadebdb2acce71390e7adb4289eec0681c3e1e4dc456"
+    },
+    "50": {
+      "sha256": "c887650a3e6ec98eb2e3834643f66121a3b6e9bdf5c92b76c0741d0d67144d49"
+    },
+    "75": {
+      "sha256": "2dcb084a5161045231bd5e33c8463495af6a2c1495f2a632e84020b71f2c409d"
+    },
+    "82": {
+      "sha256": "2a0850bd261eb60ae40f53dcfb830bbde763e154ae3862db9ee4daac5d7b9707"
+    },
+    "86": {
+      "sha256": "8887afab9ee737cfa0d1c14e10700997388edf5ea3706d03d62d569cc8bd90e9"
+    }
+  }
+}

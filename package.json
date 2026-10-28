@@ -1,0 +1,51 @@
+{
+  "name": "aegispath",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "npm run typecheck && node node_modules/vite/bin/vite.js build",
+    "preview": "node node_modules/vite/bin/vite.js preview",
+    "typecheck": "node node_modules/vue-tsc/bin/vue-tsc.js --noEmit",
+    "test": "node node_modules/vitest/vitest.mjs run",
+    "test:watch": "node node_modules/vitest/vitest.mjs",
+    "test:e2e": "node node_modules/@playwright/test/cli.js test",
+    "browsers:install": "node node_modules/@playwright/test/cli.js install chromium",
+    "lint": "node node_modules/eslint/bin/eslint.js . --max-warnings 0",
+    "format": "node node_modules/prettier/bin/prettier.cjs --write .",
+    "format:check": "node node_modules/prettier/bin/prettier.cjs --check .",
+    "check": "npm run lint && npm run test && npm run build",
+    "data:verify": "node scripts/verify-planner-data.mjs"
+  },
+  "dependencies": {
+    "vue": "3.5.44",
+    "pinia": "4.1.0",
+    "reka-ui": "2.11.0",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "tailwind-merge": "3.7.0",
+    "@lucide/vue": "1.63.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.5",
+    "@vitejs/plugin-vue": "6.0.10",
+    "typescript": "6.0.3",
+    "vue-tsc": "3.3.13",
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/vite": "4.3.3",
+    "vitest": "5.0.5",
+    "eslint": "10.13.0",
+    "@eslint/js": "10.0.1",
+    "eslint-plugin-vue": "10.12.0",
+    "typescript-eslint": "8.72.1",
+    "prettier": "3.9.10",
+    "eslint-config-prettier": "10.1.8",
+    "@types/node": "26.6.6",
+    "@playwright/test": "1.64.1",
+    "@axe-core/playwright": "4.14.0"
+  }
+}

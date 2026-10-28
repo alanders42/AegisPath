@@ -1,0 +1,2998 @@
+{
+  "rules": {
+    "id": "7.41f",
+    "checkedAt": "2026-10-28",
+    "startingGold": 600,
+    "mainSlots": 6,
+    "backpackSlots": 3,
+    "talentLevels": [10, 15, 20, 25],
+    "talentReturnLevels": [27, 28, 29, 30],
+    "attributeLevels": [2, 4, 6, 8, 10, 12, 14],
+    "attributeValue": 2,
+    "sources": [
+      {
+        "label": "Valve 7.09 \u00b7 standard starting gold",
+        "url": "https://www.dota2.com/patches/7.09",
+        "kind": "rules"
+      },
+      {
+        "label": "Valve 7.40 \u00b7 separate talent points",
+        "url": "https://www.dota2.com/patches/7.40",
+        "kind": "rules"
+      },
+      {
+        "label": "Valve 7.41 \u00b7 facet removal and Meepo leveling",
+        "url": "https://www.dota2.com/patches/7.41",
+        "kind": "rules"
+      },
+      {
+        "label": "Valve scripts \u00b7 attribute limits and recipe flags",
+        "url": "https://github.com/SteamDatabase/GameTracking-Dota2/tree/23bc9a26a701a29fe357025d4ca27fc3697ac5eb/game/dota/pak01_dir/scripts/npc",
+        "kind": "game-data"
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "abyssal_blade",
+      "name": "Abyssal Blade",
+      "icon": "images/items/abyssal_blade.png",
+      "cost": 6250,
+      "components": [
+        {
+          "itemId": "basher",
+          "quantity": 1
+        },
+        {
+          "itemId": "sange",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 1275,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "aeon_disk",
+      "name": "Aeon Disk",
+      "icon": "images/items/aeon_disk.png",
+      "cost": 3000,
+      "components": [
+        {
+          "itemId": "vitality_booster",
+          "quantity": 1
+        },
+        {
+          "itemId": "energy_booster",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 1200,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": [
+        "conditional-automatic-protection",
+        "cooldown-limited",
+        "dispellable-protection"
+      ]
+    },
+    {
+      "id": "aether_lens",
+      "name": "Aether Lens",
+      "icon": "images/items/aether_lens.png",
+      "cost": 2275,
+      "components": [
+        {
+          "itemId": "energy_booster",
+          "quantity": 1
+        },
+        {
+          "itemId": "void_stone",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 775,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "aghanims_shard",
+      "name": "Aghanim's Shard",
+      "icon": "images/items/aghanims_shard.png",
+      "cost": 1400,
+      "components": [],
+      "recipeCost": 1400,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 990,
+      "mechanics": ["hero-specific-upgrade", "consumed-upgrade", "shop-stock-gated"]
+    },
+    {
+      "id": "arcane_boots",
+      "name": "Arcane Boots",
+      "icon": "images/items/arcane_boots.png",
+      "cost": 1500,
+      "components": [
+        {
+          "itemId": "boots",
+          "quantity": 1
+        },
+        {
+          "itemId": "ring_of_basilius",
+          "quantity": 1
+        },
+        {
+          "itemId": "wizard_hat",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 325,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "basher",
+      "name": "Skull Basher",
+      "icon": "images/items/basher.png",
+      "cost": 2875,
+      "components": [
+        {
+          "itemId": "mithril_hammer",
+          "quantity": 1
+        },
+        {
+          "itemId": "belt_of_strength",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 825,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "belt_of_strength",
+      "name": "Belt of Strength",
+      "icon": "images/items/belt_of_strength.png",
+      "cost": 450,
+      "components": [],
+      "recipeCost": 450,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "bfury",
+      "name": "Battle Fury",
+      "icon": "images/items/bfury.png",
+      "cost": 3900,
+      "components": [
+        {
+          "itemId": "pers",
+          "quantity": 1
+        },
+        {
+          "itemId": "broadsword",
+          "quantity": 2
+        },
+        {
+          "itemId": "quelling_blade",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 400,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["melee-cleave", "farming"]
+    },
+    {
+      "id": "black_king_bar",
+      "name": "Black King Bar",
+      "icon": "images/items/black_king_bar.png",
+      "cost": 4050,
+      "components": [
+        {
+          "itemId": "mithril_hammer",
+          "quantity": 1
+        },
+        {
+          "itemId": "ogre_axe",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 1450,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": [
+        "basic-dispel-on-activation",
+        "debuff-immunity",
+        "magic-protection",
+        "piercing-disables-not-blocked"
+      ]
+    },
+    {
+      "id": "blade_mail",
+      "name": "Blade Mail",
+      "icon": "images/items/blade_mail.png",
+      "cost": 2400,
+      "components": [
+        {
+          "itemId": "broadsword",
+          "quantity": 1
+        },
+        {
+          "itemId": "splintmail",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 450,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["damage-reflection", "not-damage-immunity"]
+    },
+    {
+      "id": "blade_of_alacrity",
+      "name": "Blade of Alacrity",
+      "icon": "images/items/blade_of_alacrity.png",
+      "cost": 1000,
+      "components": [],
+      "recipeCost": 1000,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "blades_of_attack",
+      "name": "Blades of Attack",
+      "icon": "images/items/blades_of_attack.png",
+      "cost": 450,
+      "components": [],
+      "recipeCost": 450,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "blink",
+      "name": "Blink Dagger",
+      "icon": "images/items/blink.png",
+      "cost": 2250,
+      "components": [],
+      "recipeCost": 2250,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["repositioning", "enemy-damage-lockout"]
+    },
+    {
+      "id": "blitz_knuckles",
+      "name": "Blitz Knuckles",
+      "icon": "images/items/blitz_knuckles.png",
+      "cost": 1000,
+      "components": [],
+      "recipeCost": 1000,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "blood_grenade",
+      "name": "Blood Grenade",
+      "icon": "images/items/blood_grenade.png",
+      "cost": 50,
+      "components": [],
+      "recipeCost": 50,
+      "chargesPerPurchase": 1,
+      "stackLimit": null,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "boots",
+      "name": "Boots of Speed",
+      "icon": "images/items/boots.png",
+      "cost": 500,
+      "components": [],
+      "recipeCost": 500,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "boots_of_elves",
+      "name": "Band of Elvenskin",
+      "icon": "images/items/boots_of_elves.png",
+      "cost": 450,
+      "components": [],
+      "recipeCost": 450,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "bottle",
+      "name": "Bottle",
+      "icon": "images/items/bottle.png",
+      "cost": 675,
+      "components": [],
+      "recipeCost": 675,
+      "chargesPerPurchase": 3,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "branches",
+      "name": "Iron Branch",
+      "icon": "images/items/branches.png",
+      "cost": 55,
+      "components": [],
+      "recipeCost": 55,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "broadsword",
+      "name": "Broadsword",
+      "icon": "images/items/broadsword.png",
+      "cost": 1000,
+      "components": [],
+      "recipeCost": 1000,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "butterfly",
+      "name": "Butterfly",
+      "icon": "images/items/butterfly.png",
+      "cost": 5450,
+      "components": [
+        {
+          "itemId": "eagle",
+          "quantity": 1
+        },
+        {
+          "itemId": "claymore",
+          "quantity": 1
+        },
+        {
+          "itemId": "talisman_of_evasion",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "chainmail",
+      "name": "Chainmail",
+      "icon": "images/items/chainmail.png",
+      "cost": 500,
+      "components": [],
+      "recipeCost": 500,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "chasm_stone",
+      "name": "Chasm Stone",
+      "icon": "images/items/chasm_stone.png",
+      "cost": 900,
+      "components": [],
+      "recipeCost": 900,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "circlet",
+      "name": "Circlet",
+      "icon": "images/items/circlet.png",
+      "cost": 155,
+      "components": [],
+      "recipeCost": 155,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "clarity",
+      "name": "Clarity",
+      "icon": "images/items/clarity.png",
+      "cost": 60,
+      "components": [],
+      "recipeCost": 60,
+      "chargesPerPurchase": 1,
+      "stackLimit": null,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "claymore",
+      "name": "Claymore",
+      "icon": "images/items/claymore.png",
+      "cost": 1350,
+      "components": [],
+      "recipeCost": 1350,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "cloak",
+      "name": "Cloak",
+      "icon": "images/items/cloak.png",
+      "cost": 900,
+      "components": [],
+      "recipeCost": 900,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "cyclone",
+      "name": "Eul's Scepter of Divinity",
+      "icon": "images/items/cyclone.png",
+      "cost": 2600,
+      "components": [
+        {
+          "itemId": "staff_of_wizardry",
+          "quantity": 1
+        },
+        {
+          "itemId": "void_stone",
+          "quantity": 1
+        },
+        {
+          "itemId": "wind_lace",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 675,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "demon_edge",
+      "name": "Demon Edge",
+      "icon": "images/items/demon_edge.png",
+      "cost": 2200,
+      "components": [],
+      "recipeCost": 2200,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "diadem",
+      "name": "Diadem",
+      "icon": "images/items/diadem.png",
+      "cost": 1000,
+      "components": [],
+      "recipeCost": 1000,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "diffusal_blade",
+      "name": "Diffusal Blade",
+      "icon": "images/items/diffusal_blade.png",
+      "cost": 2500,
+      "components": [
+        {
+          "itemId": "blade_of_alacrity",
+          "quantity": 1
+        },
+        {
+          "itemId": "robe",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 1050,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "disperser",
+      "name": "Disperser",
+      "icon": "images/items/disperser.png",
+      "cost": 6100,
+      "components": [
+        {
+          "itemId": "diffusal_blade",
+          "quantity": 1
+        },
+        {
+          "itemId": "eagle",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 800,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "dust",
+      "name": "Dust of Appearance",
+      "icon": "images/items/dust.png",
+      "cost": 80,
+      "components": [],
+      "recipeCost": 80,
+      "chargesPerPurchase": 1,
+      "stackLimit": null,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["area-detection", "consumable", "does-not-reveal-invulnerability"]
+    },
+    {
+      "id": "eagle",
+      "name": "Eaglesong",
+      "icon": "images/items/eagle.png",
+      "cost": 2800,
+      "components": [],
+      "recipeCost": 2800,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "enchanted_mango",
+      "name": "Enchanted Mango",
+      "icon": "images/items/enchanted_mango.png",
+      "cost": 65,
+      "components": [],
+      "recipeCost": 65,
+      "chargesPerPurchase": 1,
+      "stackLimit": 3,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "energy_booster",
+      "name": "Energy Booster",
+      "icon": "images/items/energy_booster.png",
+      "cost": 800,
+      "components": [],
+      "recipeCost": 800,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "faerie_fire",
+      "name": "Faerie Fire",
+      "icon": "images/items/faerie_fire.png",
+      "cost": 65,
+      "components": [],
+      "recipeCost": 65,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "flask",
+      "name": "Healing Salve",
+      "icon": "images/items/flask.png",
+      "cost": 100,
+      "components": [],
+      "recipeCost": 100,
+      "chargesPerPurchase": 1,
+      "stackLimit": null,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "fluffy_hat",
+      "name": "Fluffy Hat",
+      "icon": "images/items/fluffy_hat.png",
+      "cost": 250,
+      "components": [],
+      "recipeCost": 250,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "force_staff",
+      "name": "Force Staff",
+      "icon": "images/items/force_staff.png",
+      "cost": 2200,
+      "components": [
+        {
+          "itemId": "staff_of_wizardry",
+          "quantity": 1
+        },
+        {
+          "itemId": "fluffy_hat",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 950,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": [
+        "eligible-target-forced-movement",
+        "does-not-dispel",
+        "movement-restrictions-apply"
+      ]
+    },
+    {
+      "id": "ghost",
+      "name": "Ghost Scepter",
+      "icon": "images/items/ghost.png",
+      "cost": 1500,
+      "components": [],
+      "recipeCost": 1500,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["self-ethereal", "physical-attack-protection", "increased-magic-vulnerability"]
+    },
+    {
+      "id": "glimmer_cape",
+      "name": "Glimmer Cape",
+      "icon": "images/items/glimmer_cape.png",
+      "cost": 2150,
+      "components": [
+        {
+          "itemId": "shadow_amulet",
+          "quantity": 1
+        },
+        {
+          "itemId": "shawl",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 800,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["ally-targeted-protection", "magic-barrier", "invisibility"]
+    },
+    {
+      "id": "gloves",
+      "name": "Gloves of Haste",
+      "icon": "images/items/gloves.png",
+      "cost": 450,
+      "components": [],
+      "recipeCost": 450,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "heart",
+      "name": "Heart of Tarrasque",
+      "icon": "images/items/heart.png",
+      "cost": 5300,
+      "components": [
+        {
+          "itemId": "reaver",
+          "quantity": 1
+        },
+        {
+          "itemId": "ring_of_tarrasque",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 800,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "javelin",
+      "name": "Javelin",
+      "icon": "images/items/javelin.png",
+      "cost": 900,
+      "components": [],
+      "recipeCost": 900,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "lifesteal",
+      "name": "Morbid Mask",
+      "icon": "images/items/lifesteal.png",
+      "cost": 900,
+      "components": [],
+      "recipeCost": 900,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "lotus_orb",
+      "name": "Lotus Orb",
+      "icon": "images/items/lotus_orb.png",
+      "cost": 3850,
+      "components": [
+        {
+          "itemId": "pers",
+          "quantity": 1
+        },
+        {
+          "itemId": "platemail",
+          "quantity": 1
+        },
+        {
+          "itemId": "energy_booster",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 250,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["ally-basic-dispel", "targeted-spell-reflection", "does-not-block-spell"]
+    },
+    {
+      "id": "magic_stick",
+      "name": "Magic Stick",
+      "icon": "images/items/magic_stick.png",
+      "cost": 200,
+      "components": [],
+      "recipeCost": 200,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "magic_wand",
+      "name": "Magic Wand",
+      "icon": "images/items/magic_wand.png",
+      "cost": 460,
+      "components": [
+        {
+          "itemId": "magic_stick",
+          "quantity": 1
+        },
+        {
+          "itemId": "branches",
+          "quantity": 2
+        }
+      ],
+      "recipeCost": 150,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "manta",
+      "name": "Manta Style",
+      "icon": "images/items/manta.png",
+      "cost": 4650,
+      "components": [
+        {
+          "itemId": "yasha",
+          "quantity": 1
+        },
+        {
+          "itemId": "diadem",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 1550,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["basic-dispel", "illusions"]
+    },
+    {
+      "id": "mantle",
+      "name": "Mantle of Intelligence",
+      "icon": "images/items/mantle.png",
+      "cost": 140,
+      "components": [],
+      "recipeCost": 140,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "mithril_hammer",
+      "name": "Mithril Hammer",
+      "icon": "images/items/mithril_hammer.png",
+      "cost": 1600,
+      "components": [],
+      "recipeCost": 1600,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "monkey_king_bar",
+      "name": "Monkey King Bar",
+      "icon": "images/items/monkey_king_bar.png",
+      "cost": 5000,
+      "components": [
+        {
+          "itemId": "demon_edge",
+          "quantity": 1
+        },
+        {
+          "itemId": "blitz_knuckles",
+          "quantity": 1
+        },
+        {
+          "itemId": "javelin",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 900,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["attack-accuracy-procs", "attack-damage"]
+    },
+    {
+      "id": "mystic_staff",
+      "name": "Mystic Staff",
+      "icon": "images/items/mystic_staff.png",
+      "cost": 2800,
+      "components": [],
+      "recipeCost": 2800,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "octarine_core",
+      "name": "Octarine Core",
+      "icon": "images/items/octarine_core.png",
+      "cost": 5100,
+      "components": [
+        {
+          "itemId": "soul_booster",
+          "quantity": 1
+        },
+        {
+          "itemId": "tiara_of_selemene",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 400,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ogre_axe",
+      "name": "Ogre Axe",
+      "icon": "images/items/ogre_axe.png",
+      "cost": 1000,
+      "components": [],
+      "recipeCost": 1000,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "orb_of_frost",
+      "name": "Orb of Frost",
+      "icon": "images/items/orb_of_frost.png",
+      "cost": 300,
+      "components": [],
+      "recipeCost": 300,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "orb_of_venom",
+      "name": "Orb of Venom",
+      "icon": "images/items/orb_of_venom.png",
+      "cost": 350,
+      "components": [],
+      "recipeCost": 350,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "overwhelming_blink",
+      "name": "Overwhelming Blink",
+      "icon": "images/items/overwhelming_blink.png",
+      "cost": 6800,
+      "components": [
+        {
+          "itemId": "blink",
+          "quantity": 1
+        },
+        {
+          "itemId": "reaver",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 1750,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "pers",
+      "name": "Perseverance",
+      "icon": "images/items/pers.png",
+      "cost": 1400,
+      "components": [
+        {
+          "itemId": "ring_of_health",
+          "quantity": 1
+        },
+        {
+          "itemId": "void_stone",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "phase_boots",
+      "name": "Phase Boots",
+      "icon": "images/items/phase_boots.png",
+      "cost": 1450,
+      "components": [
+        {
+          "itemId": "boots",
+          "quantity": 1
+        },
+        {
+          "itemId": "chainmail",
+          "quantity": 1
+        },
+        {
+          "itemId": "blades_of_attack",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "pipe",
+      "name": "Pipe of Insight",
+      "icon": "images/items/pipe.png",
+      "cost": 3725,
+      "components": [
+        {
+          "itemId": "ring_of_tarrasque",
+          "quantity": 1
+        },
+        {
+          "itemId": "cloak",
+          "quantity": 1
+        },
+        {
+          "itemId": "shawl",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 675,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["team-magic-barrier", "magic-resistance-aura"]
+    },
+    {
+      "id": "platemail",
+      "name": "Platemail",
+      "icon": "images/items/platemail.png",
+      "cost": 1400,
+      "components": [],
+      "recipeCost": 1400,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "point_booster",
+      "name": "Point Booster",
+      "icon": "images/items/point_booster.png",
+      "cost": 1200,
+      "components": [],
+      "recipeCost": 1200,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "power_treads",
+      "name": "Power Treads",
+      "icon": "images/items/power_treads.png",
+      "cost": 1400,
+      "components": [
+        {
+          "itemId": "boots",
+          "quantity": 1
+        },
+        {
+          "itemId": "gloves",
+          "quantity": 1
+        },
+        {
+          "itemId": "belt_of_strength",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "quelling_blade",
+      "name": "Quelling Blade",
+      "icon": "images/items/quelling_blade.png",
+      "cost": 100,
+      "components": [],
+      "recipeCost": 100,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "reaver",
+      "name": "Reaver",
+      "icon": "images/items/reaver.png",
+      "cost": 2800,
+      "components": [],
+      "recipeCost": 2800,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ring_of_basilius",
+      "name": "Ring of Basilius",
+      "icon": "images/items/ring_of_basilius.png",
+      "cost": 425,
+      "components": [
+        {
+          "itemId": "sobi_mask",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 250,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ring_of_health",
+      "name": "Ring of Health",
+      "icon": "images/items/ring_of_health.png",
+      "cost": 700,
+      "components": [],
+      "recipeCost": 700,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ring_of_protection",
+      "name": "Ring of Protection",
+      "icon": "images/items/ring_of_protection.png",
+      "cost": 175,
+      "components": [],
+      "recipeCost": 175,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ring_of_tarrasque",
+      "name": "Ring of Tarrasque",
+      "icon": "images/items/ring_of_tarrasque.png",
+      "cost": 1700,
+      "components": [],
+      "recipeCost": 1700,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "robe",
+      "name": "Robe of the Magi",
+      "icon": "images/items/robe.png",
+      "cost": 450,
+      "components": [],
+      "recipeCost": 450,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "sange",
+      "name": "Sange",
+      "icon": "images/items/sange.png",
+      "cost": 2100,
+      "components": [
+        {
+          "itemId": "ogre_axe",
+          "quantity": 1
+        },
+        {
+          "itemId": "belt_of_strength",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 650,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "satanic",
+      "name": "Satanic",
+      "icon": "images/items/satanic.png",
+      "cost": 5050,
+      "components": [
+        {
+          "itemId": "reaver",
+          "quantity": 1
+        },
+        {
+          "itemId": "claymore",
+          "quantity": 1
+        },
+        {
+          "itemId": "lifesteal",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "shadow_amulet",
+      "name": "Shadow Amulet",
+      "icon": "images/items/shadow_amulet.png",
+      "cost": 900,
+      "components": [],
+      "recipeCost": 900,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "shawl",
+      "name": "Shawl",
+      "icon": "images/items/shawl.png",
+      "cost": 450,
+      "components": [],
+      "recipeCost": 450,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "sheepstick",
+      "name": "Scythe of Vyse",
+      "icon": "images/items/sheepstick.png",
+      "cost": 5200,
+      "components": [
+        {
+          "itemId": "mystic_staff",
+          "quantity": 1
+        },
+        {
+          "itemId": "tiara_of_selemene",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 700,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "shivas_guard",
+      "name": "Shiva's Guard",
+      "icon": "images/items/shivas_guard.png",
+      "cost": 4500,
+      "components": [
+        {
+          "itemId": "platemail",
+          "quantity": 1
+        },
+        {
+          "itemId": "splintmail",
+          "quantity": 1
+        },
+        {
+          "itemId": "chasm_stone",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 1250,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["armor", "area-health-restoration-reduction"]
+    },
+    {
+      "id": "skadi",
+      "name": "Eye of Skadi",
+      "icon": "images/items/skadi.png",
+      "cost": 5900,
+      "components": [
+        {
+          "itemId": "ultimate_orb",
+          "quantity": 2
+        },
+        {
+          "itemId": "orb_of_frost",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["attack-applied-health-restoration-reduction", "attributes"]
+    },
+    {
+      "id": "slippers",
+      "name": "Slippers of Agility",
+      "icon": "images/items/slippers.png",
+      "cost": 140,
+      "components": [],
+      "recipeCost": 140,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "sobi_mask",
+      "name": "Sage's Mask",
+      "icon": "images/items/sobi_mask.png",
+      "cost": 175,
+      "components": [],
+      "recipeCost": 175,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "soul_booster",
+      "name": "Soul Booster",
+      "icon": "images/items/soul_booster.png",
+      "cost": 3000,
+      "components": [
+        {
+          "itemId": "point_booster",
+          "quantity": 1
+        },
+        {
+          "itemId": "vitality_booster",
+          "quantity": 1
+        },
+        {
+          "itemId": "energy_booster",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "sphere",
+      "name": "Linken's Sphere",
+      "icon": "images/items/sphere.png",
+      "cost": 4800,
+      "components": [
+        {
+          "itemId": "pers",
+          "quantity": 1
+        },
+        {
+          "itemId": "ultimate_orb",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 600,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["single-eligible-spell-block", "cooldown-limited"]
+    },
+    {
+      "id": "splintmail",
+      "name": "Splintmail",
+      "icon": "images/items/splintmail.png",
+      "cost": 950,
+      "components": [],
+      "recipeCost": 950,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "staff_of_wizardry",
+      "name": "Staff of Wizardry",
+      "icon": "images/items/staff_of_wizardry.png",
+      "cost": 1000,
+      "components": [],
+      "recipeCost": 1000,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "talisman_of_evasion",
+      "name": "Talisman of Evasion",
+      "icon": "images/items/talisman_of_evasion.png",
+      "cost": 1300,
+      "components": [],
+      "recipeCost": 1300,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "tango",
+      "name": "Tango",
+      "icon": "images/items/tango.png",
+      "cost": 90,
+      "components": [],
+      "recipeCost": 90,
+      "chargesPerPurchase": 3,
+      "stackLimit": null,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "tiara_of_selemene",
+      "name": "Tiara of Selemene",
+      "icon": "images/items/tiara_of_selemene.png",
+      "cost": 1700,
+      "components": [],
+      "recipeCost": 1700,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "tpscroll",
+      "name": "Town Portal Scroll",
+      "icon": "images/items/tpscroll.png",
+      "cost": 100,
+      "components": [],
+      "recipeCost": 100,
+      "chargesPerPurchase": 1,
+      "stackLimit": null,
+      "slot": "tp",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "travel_boots",
+      "name": "Boots of Travel",
+      "icon": "images/items/travel_boots.png",
+      "cost": 2500,
+      "components": [
+        {
+          "itemId": "boots",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 2000,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ultimate_orb",
+      "name": "Ultimate Orb",
+      "icon": "images/items/ultimate_orb.png",
+      "cost": 2800,
+      "components": [],
+      "recipeCost": 2800,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ultimate_scepter",
+      "name": "Aghanim's Scepter",
+      "icon": "images/items/ultimate_scepter.png",
+      "cost": 4200,
+      "components": [
+        {
+          "itemId": "point_booster",
+          "quantity": 1
+        },
+        {
+          "itemId": "staff_of_wizardry",
+          "quantity": 1
+        },
+        {
+          "itemId": "ogre_axe",
+          "quantity": 1
+        },
+        {
+          "itemId": "blade_of_alacrity",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": ["hero-specific-upgrade", "permanent-main-inventory-item"]
+    },
+    {
+      "id": "vitality_booster",
+      "name": "Vitality Booster",
+      "icon": "images/items/vitality_booster.png",
+      "cost": 1000,
+      "components": [],
+      "recipeCost": 1000,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "void_stone",
+      "name": "Void Stone",
+      "icon": "images/items/void_stone.png",
+      "cost": 700,
+      "components": [],
+      "recipeCost": 700,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ward_observer",
+      "name": "Observer Ward",
+      "icon": "images/items/ward_observer.png",
+      "cost": 0,
+      "components": [],
+      "recipeCost": 0,
+      "chargesPerPurchase": 1,
+      "stackLimit": null,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "ward_sentry",
+      "name": "Sentry Ward",
+      "icon": "images/items/ward_sentry.png",
+      "cost": 50,
+      "components": [],
+      "recipeCost": 50,
+      "chargesPerPurchase": 1,
+      "stackLimit": null,
+      "slot": "main",
+      "consumable": true,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "wind_lace",
+      "name": "Wind Lace",
+      "icon": "images/items/wind_lace.png",
+      "cost": 225,
+      "components": [],
+      "recipeCost": 225,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "wizard_hat",
+      "name": "Wizard Hat",
+      "icon": "images/items/wizard_hat.png",
+      "cost": 250,
+      "components": [],
+      "recipeCost": 250,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "yasha",
+      "name": "Yasha",
+      "icon": "images/items/yasha.png",
+      "cost": 2100,
+      "components": [
+        {
+          "itemId": "blade_of_alacrity",
+          "quantity": 1
+        },
+        {
+          "itemId": "boots_of_elves",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 650,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    },
+    {
+      "id": "null_talisman",
+      "name": "Null Talisman",
+      "icon": "images/items/null_talisman.png",
+      "cost": 505,
+      "components": [
+        {
+          "itemId": "circlet",
+          "quantity": 1
+        },
+        {
+          "itemId": "mantle",
+          "quantity": 1
+        }
+      ],
+      "recipeCost": 210,
+      "chargesPerPurchase": 1,
+      "stackLimit": 1,
+      "slot": "main",
+      "consumable": false,
+      "purchasable": true,
+      "availableAfter": 0,
+      "mechanics": []
+    }
+  ],
+  "abilities": [
+    {
+      "id": "juggernaut_blade_fury",
+      "heroId": 8,
+      "name": "Blade Fury",
+      "icon": "images/abilities/juggernaut_blade_fury.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune with [see in-game value]%% magic resistance and dealing damage every [see in-game value]s to nearby enemy units."
+    },
+    {
+      "id": "juggernaut_healing_ward",
+      "heroId": 8,
+      "name": "Healing Ward",
+      "icon": "images/abilities/juggernaut_healing_ward.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Summons a Healing Ward which heals all nearby allied units, based on their max health."
+    },
+    {
+      "id": "juggernaut_blade_dance",
+      "heroId": 8,
+      "name": "Blade Dance",
+      "icon": "images/abilities/juggernaut_blade_dance.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Gives Juggernaut a chance to deal critical damage with Blade Fury and on each attack.."
+    },
+    {
+      "id": "juggernaut_swift_slash",
+      "heroId": 8,
+      "name": "Swiftslash",
+      "icon": "images/abilities/juggernaut_swift_slash.png",
+      "kind": "item-granted",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Performs a short Omnislash for [see in-game value] seconds..",
+      "grantedBy": "ultimate_scepter"
+    },
+    {
+      "id": "juggernaut_bladeform",
+      "heroId": 8,
+      "name": "Bladeform",
+      "icon": "images/heroes/juggernaut.png",
+      "kind": "innate",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Juggernaut gains a stack of Bladeform every [see in-game value]s that Juggernaut does not take damage."
+    },
+    {
+      "id": "juggernaut_omni_slash",
+      "heroId": 8,
+      "name": "Omnislash",
+      "icon": "images/abilities/juggernaut_omni_slash.png",
+      "kind": "ultimate",
+      "maxLevel": 3,
+      "requiredLevels": [6, 12, 18],
+      "summary": "Juggernaut leaps towards the target enemy units, and then slashes the target and other nearby enemy units at an increased attack rate."
+    },
+    {
+      "id": "lina_dragon_slave",
+      "heroId": 25,
+      "name": "Dragon Slave",
+      "icon": "images/abilities/lina_dragon_slave.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path.."
+    },
+    {
+      "id": "lina_light_strike_array",
+      "heroId": 25,
+      "name": "Light Strike Array",
+      "icon": "images/abilities/lina_light_strike_array.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Summons a column of flames that damages and stuns enemies.."
+    },
+    {
+      "id": "lina_fiery_soul",
+      "heroId": 25,
+      "name": "Fiery Soul",
+      "icon": "images/abilities/lina_fiery_soul.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Grants bonus attack and movement speed each time Lina hits an enemy with a spell."
+    },
+    {
+      "id": "lina_flame_cloak",
+      "heroId": 25,
+      "name": "Flame Cloak",
+      "icon": "images/abilities/lina_flame_cloak.png",
+      "kind": "item-granted",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Grants Lina unobstructed movement and increases her spell damage and magic resistance.",
+      "grantedBy": "ultimate_scepter"
+    },
+    {
+      "id": "lina_slow_burn",
+      "heroId": 25,
+      "name": "Slow Burn",
+      "icon": "images/heroes/lina.png",
+      "kind": "innate",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Lina's abilities deal an additional [see in-game value]%% damage as burn damage over [see in-game value]s.."
+    },
+    {
+      "id": "lina_laguna_blade",
+      "heroId": 25,
+      "name": "Laguna Blade",
+      "icon": "images/abilities/lina_laguna_blade.png",
+      "kind": "ultimate",
+      "maxLevel": 3,
+      "requiredLevels": [6, 12, 18],
+      "summary": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage.."
+    },
+    {
+      "id": "axe_berserkers_call",
+      "heroId": 2,
+      "name": "Berserker's Call",
+      "icon": "images/abilities/axe_berserkers_call.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Axe taunts nearby enemy units, forcing them to attack him while he gains bonus armor during the duration.."
+    },
+    {
+      "id": "axe_battle_hunger",
+      "heroId": 2,
+      "name": "Battle Hunger",
+      "icon": "images/abilities/axe_battle_hunger.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Enrages an enemy unit, causing it to take damage over time until it kills another unit or the duration ends."
+    },
+    {
+      "id": "axe_counter_helix",
+      "heroId": 2,
+      "name": "Counter Helix",
+      "icon": "images/abilities/axe_counter_helix.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "After a set number of attacks, Axe will perform a helix counter attack, dealing pure damage to all nearby enemies.."
+    },
+    {
+      "id": "axe_culling_blade",
+      "heroId": 2,
+      "name": "Culling Blade",
+      "icon": "images/abilities/axe_culling_blade.png",
+      "kind": "ultimate",
+      "maxLevel": 3,
+      "requiredLevels": [6, 12, 18],
+      "summary": "Axe spots a weakness and strikes, dealing pure damage."
+    },
+    {
+      "id": "axe_one_man_army",
+      "heroId": 2,
+      "name": "One Man Army",
+      "icon": "images/heroes/axe.png",
+      "kind": "innate",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Axe gains Strength based on [see in-game value]%% of his Armor as long as there are no allied heroes within [see in-game value] distance from Axe."
+    },
+    {
+      "id": "rubick_telekinesis",
+      "heroId": 86,
+      "name": "Telekinesis",
+      "icon": "images/abilities/rubick_telekinesis.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Rubick uses his telekinetic powers to lift the enemy into the air briefly and then hurls them back at the ground."
+    },
+    {
+      "id": "rubick_fade_bolt",
+      "heroId": 86,
+      "name": "Fade Bolt",
+      "icon": "images/abilities/rubick_fade_bolt.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Rubick creates a powerful stream of arcane energy that travels between enemy units, dealing damage and reducing their attack and spell damage."
+    },
+    {
+      "id": "rubick_arcane_supremacy",
+      "heroId": 86,
+      "name": "Arcane Supremacy",
+      "icon": "images/abilities/rubick_arcane_supremacy.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Rubick's mastery of the arcane allows him to have a larger cast range and bonus spell amplification.."
+    },
+    {
+      "id": "rubick_spell_steal",
+      "heroId": 86,
+      "name": "Spell Steal",
+      "icon": "images/abilities/rubick_spell_steal.png",
+      "kind": "ultimate",
+      "maxLevel": 3,
+      "requiredLevels": [6, 12, 18],
+      "summary": "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast."
+    },
+    {
+      "id": "rubick_curiosity",
+      "heroId": 86,
+      "name": "Curiosity",
+      "icon": "images/abilities/rubick_curiosity.png",
+      "kind": "innate",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Rubick gains [see in-game value] stack of Curiosity per level that grants him [see in-game value] base damage, [see in-game value]%% Buff/Debuff Duration, and [see in-game value] AOE Bonus."
+    },
+    {
+      "id": "crystal_maiden_crystal_nova",
+      "heroId": 5,
+      "name": "Crystal Nova",
+      "icon": "images/abilities/crystal_maiden_crystal_nova.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "A burst of damaging frost slows enemy movement in the targeted area.."
+    },
+    {
+      "id": "crystal_maiden_frostbite",
+      "heroId": 5,
+      "name": "Frostbite",
+      "icon": "images/abilities/crystal_maiden_frostbite.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time."
+    },
+    {
+      "id": "crystal_maiden_brilliance_aura",
+      "heroId": 5,
+      "name": "Arcane Aura",
+      "icon": "images/abilities/crystal_maiden_brilliance_aura.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Gives mana regeneration to all friendly units on the map."
+    },
+    {
+      "id": "crystal_maiden_crystal_clone",
+      "heroId": 5,
+      "name": "Crystal Clone",
+      "icon": "images/abilities/crystal_maiden_crystal_clone.png",
+      "kind": "item-granted",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Slides in a direction, creating a crystal clone of herself in her place and disjointing incoming projectiles.",
+      "grantedBy": "aghanims_shard"
+    },
+    {
+      "id": "crystal_maiden_glacial_guard",
+      "heroId": 5,
+      "name": "Glacial Guard",
+      "icon": "images/abilities/crystal_maiden_glacial_guard.png",
+      "kind": "innate",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "A portion of the mana Crystal Maiden spends on her abilities is converted into a physical barrier.."
+    },
+    {
+      "id": "crystal_maiden_freezing_field",
+      "heroId": 5,
+      "name": "Freezing Field",
+      "icon": "images/abilities/crystal_maiden_freezing_field.png",
+      "kind": "ultimate",
+      "maxLevel": 3,
+      "requiredLevels": [6, 12, 18],
+      "summary": "CHANNELED - Surrounds Crystal Maiden with [see in-game value] random icy explosions that slow enemies and deal massive damage."
+    },
+    {
+      "id": "meepo_earthbind",
+      "heroId": 82,
+      "name": "Earthbind",
+      "icon": "images/abilities/meepo_earthbind.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Tosses a net at the target point, rooting down all enemy units in an area around it.."
+    },
+    {
+      "id": "meepo_poof",
+      "heroId": 82,
+      "name": "Poof",
+      "icon": "images/abilities/meepo_poof.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Drawing mystical energies from the earth, a Meepo can teleport to another Meepo or itself after channeling for [see in-game value] seconds, damaging the enemy in both the departure and arrival locations."
+    },
+    {
+      "id": "meepo_ransack",
+      "heroId": 82,
+      "name": "Ransack",
+      "icon": "images/abilities/meepo_ransack.png",
+      "kind": "basic",
+      "maxLevel": 4,
+      "requiredLevels": [1, 3, 5, 7],
+      "summary": "Steals health from the enemy with each strike and heals all other Meepos for that amount."
+    },
+    {
+      "id": "meepo_petrify",
+      "heroId": 82,
+      "name": "Dig",
+      "icon": "images/abilities/meepo_petrify.png",
+      "kind": "item-granted",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Digs into the ground for a short duration, dispelling Meepo and causing him to become invulnerable and untargetable for [see in-game value]s.",
+      "grantedBy": "aghanims_shard"
+    },
+    {
+      "id": "meepo_megameepo",
+      "heroId": 82,
+      "name": "MegaMeepo",
+      "icon": "images/abilities/meepo_megameepo.png",
+      "kind": "item-granted",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Primary Meepo mounts all other Meepos in a [see in-game value] radius around him on top of his shoulders.",
+      "grantedBy": "ultimate_scepter"
+    },
+    {
+      "id": "meepo_divided_we_stand",
+      "heroId": 82,
+      "name": "Divided We Stand",
+      "icon": "images/abilities/meepo_divided_we_stand.png",
+      "kind": "ultimate",
+      "maxLevel": 4,
+      "requiredLevels": [3, 10, 17, 24],
+      "summary": "Meepo summons another Meepo, which levels up and shares items and experience with the main Meepo."
+    },
+    {
+      "id": "meepo_geomancy",
+      "heroId": 82,
+      "name": "Geomancy",
+      "icon": "images/heroes/meepo.png",
+      "kind": "innate",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "Meepo grants stacking bonuses to himself and his clones based on their terrain."
+    },
+    {
+      "id": "meepo_megameepo_fling",
+      "heroId": 82,
+      "name": "MegaMeepo Fling",
+      "icon": "images/abilities/meepo_megameepo_fling.png",
+      "kind": "item-granted",
+      "maxLevel": 1,
+      "requiredLevels": [],
+      "summary": "In MegaMeepo form, Meepo flings the topmost meepo towards a target within a [see in-game value] range, dealing damage and slowing their movement speed..",
+      "grantedBy": "ultimate_scepter"
+    },
+    {
+      "id": "riki_backstab",
+      "heroId": 32,
+      "name": "Cloak and Dagger",
+      "icon": "images/abilities/riki_backstab.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Cloak and Dagger invisibility requires detection; detection does not disable Tricks of the Trade."
+    },
+    {
+      "id": "riki_blink_strike",
+      "heroId": 32,
+      "name": "Blink Strike",
+      "icon": "images/abilities/riki_blink_strike.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Blink Strike reaches vulnerable backline heroes."
+    },
+    {
+      "id": "riki_smoke_screen",
+      "heroId": 32,
+      "name": "Smoke Screen",
+      "icon": "images/abilities/riki_smoke_screen.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Smoke Screen silences while inside its area; a basic dispel alone does not remove the ground effect."
+    },
+    {
+      "id": "phantom_assassin_immaterial",
+      "heroId": 44,
+      "name": "Immaterial",
+      "icon": "images/abilities/phantom_assassin_immaterial.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Evasion can reduce an attacking core\u2019s damage reliability."
+    },
+    {
+      "id": "phantom_assassin_phantom_strike",
+      "heroId": 44,
+      "name": "Phantom Strike",
+      "icon": "images/abilities/phantom_assassin_phantom_strike.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Phantom Strike reaches vulnerable targets."
+    },
+    {
+      "id": "phantom_assassin_coup_de_grace",
+      "heroId": 44,
+      "name": "Coup de Grace",
+      "icon": "images/abilities/phantom_assassin_coup_de_grace.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Critical attacks threaten exposed supports."
+    },
+    {
+      "id": "phantom_lancer_juxtapose",
+      "heroId": 12,
+      "name": "Juxtapose",
+      "icon": "images/abilities/phantom_lancer_juxtapose.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Multiple illusions demand compatible area damage rather than single-target burst alone."
+    },
+    {
+      "id": "dazzle_shadow_wave",
+      "heroId": 50,
+      "name": "Shadow Wave",
+      "icon": "images/abilities/dazzle_shadow_wave.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Healing can prolong trades; healing reduction does not cancel Shallow Grave."
+    },
+    {
+      "id": "silencer_global_silence",
+      "heroId": 75,
+      "name": "Global Silence",
+      "icon": "images/abilities/silencer_global_silence.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Global Silence can interrupt spell participation and is removable by a suitable basic dispel."
+    },
+    {
+      "id": "storm_spirit_ball_lightning",
+      "heroId": 17,
+      "name": "Ball Lightning",
+      "icon": "images/abilities/storm_spirit_ball_lightning.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Ball Lightning reaches the backline; repositioning is not a hard counter to repeated jumps."
+    },
+    {
+      "id": "necrolyte_sadist",
+      "heroId": 36,
+      "name": "Sadist",
+      "icon": "images/abilities/necrolyte_sadist.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Recovery can sustain repeated lane trades."
+    },
+    {
+      "id": "drow_ranger_marksmanship",
+      "heroId": 6,
+      "name": "Marksmanship",
+      "icon": "images/abilities/drow_ranger_marksmanship.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Ranged physical attacks punish unprotected supports."
+    },
+    {
+      "id": "sniper_take_aim",
+      "heroId": 35,
+      "name": "Take Aim",
+      "icon": "images/abilities/sniper_take_aim.png",
+      "kind": "reference",
+      "maxLevel": 0,
+      "requiredLevels": [],
+      "summary": "Long-range attacks threaten exposed targets."
+    }
+  ],
+  "talents": [
+    {
+      "id": "special_bonus_unique_juggernaut_5",
+      "heroId": 8,
+      "name": "-12s Healing Ward Cooldown",
+      "tier": 10,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_juggernaut_3",
+      "heroId": 8,
+      "name": "-1.0s Bladeform Stack Gain Interval",
+      "tier": 10,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_juggernaut_omnislash_cooldown",
+      "heroId": 8,
+      "name": "-15s Omnislash Cooldown",
+      "tier": 15,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_juggernaut_blade_fury_movespeed",
+      "heroId": 8,
+      "name": "45 Movement Speed During Blade Fury",
+      "tier": 15,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_juggernaut_4",
+      "heroId": 8,
+      "name": "+15% Blade Dance Crit Damage",
+      "tier": 20,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_juggernaut",
+      "heroId": 8,
+      "name": "+120 Blade Fury Damage Per Second",
+      "tier": 20,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_juggernaut_omnislash_duration",
+      "heroId": 8,
+      "name": "+1s Omnislash Duration",
+      "tier": 25,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_juggernaut_blade_dance_lifesteal",
+      "heroId": 8,
+      "name": "+40% Blade Dance Lifesteal",
+      "tier": 25,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_attack_damage_25",
+      "heroId": 25,
+      "name": "+25 Damage",
+      "tier": 10,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_lina_1",
+      "heroId": 25,
+      "name": "-3s Dragon Slave Cooldown",
+      "tier": 10,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_lina_4",
+      "heroId": 25,
+      "name": "5% Fiery Soul Magic Resist Per Stack",
+      "tier": 15,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_lina_3",
+      "heroId": 25,
+      "name": "+110 Light Strike Array Damage",
+      "tier": 15,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_lina_6",
+      "heroId": 25,
+      "name": "-20s Laguna Blade Cooldown",
+      "tier": 20,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_lina_2",
+      "heroId": 25,
+      "name": "+10/1% Fiery Soul Per Stack",
+      "tier": 20,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_lina_7",
+      "heroId": 25,
+      "name": "+1s Slow Burn Duration",
+      "tier": 25,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_lina_crit_debuff",
+      "heroId": 25,
+      "name": "150% Attack Crit On Targets Affected By Slow Burn",
+      "tier": 25,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_axe_culling_blade_speed_duration",
+      "heroId": 2,
+      "name": "+3s Culling Blade Kill Buff Bonus Duration",
+      "tier": 10,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_axe_8",
+      "heroId": 2,
+      "name": "+8% Movement Speed per active Battle Hunger",
+      "tier": 10,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_axe",
+      "heroId": 2,
+      "name": "+8 Battle Hunger Damage Per Second",
+      "tier": 15,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_axe_7",
+      "heroId": 2,
+      "name": "+10 Berserker's Call Armor",
+      "tier": 15,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_strength_15",
+      "heroId": 2,
+      "name": "+15 Strength",
+      "tier": 20,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_axe_4",
+      "heroId": 2,
+      "name": "+40 Counter Helix Damage",
+      "tier": 20,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_axe_2",
+      "heroId": 2,
+      "name": "+85 Berserker's Call AoE",
+      "tier": 25,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_axe_5",
+      "heroId": 2,
+      "name": "+150 Culling Blade Damage",
+      "tier": 25,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_rubick_4",
+      "heroId": 86,
+      "name": "-2s Telekinesis Cooldown",
+      "tier": 10,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_hp_200",
+      "heroId": 86,
+      "name": "+200 Health",
+      "tier": 10,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_rubick_6",
+      "heroId": 86,
+      "name": "-40% Stolen Spells Mana Cost",
+      "tier": 15,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_rubick_3",
+      "heroId": 86,
+      "name": "-4s Fade Bolt Cooldown",
+      "tier": 15,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_rubick_fade_bolt_spell_reduction",
+      "heroId": 86,
+      "name": "+12% Fade Bolt Damage Reduction",
+      "tier": 20,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_rubick_8",
+      "heroId": 86,
+      "name": "Telekinesis Landing Deals 300 Damage",
+      "tier": 20,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_rubick_curiosity_factor",
+      "heroId": 86,
+      "name": "1.5x Curiosity Bonuses",
+      "tier": 25,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_rubick_5",
+      "heroId": 86,
+      "name": "+40% Spell Amp For Stolen Spells",
+      "tier": 25,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_hp_200",
+      "heroId": 5,
+      "name": "+200 Health",
+      "tier": 10,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_intelligence_12",
+      "heroId": 5,
+      "name": "+12 Intelligence",
+      "tier": 10,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_crystal_maiden_frostbite_castrange",
+      "heroId": 5,
+      "name": "+100 Frostbite Cast Range",
+      "tier": 15,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_crystal_maiden_5",
+      "heroId": 5,
+      "name": "-4.5s Crystal Nova Cooldown",
+      "tier": 15,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_crystal_maiden_glacial_guard_mana_multiplier",
+      "heroId": 5,
+      "name": "+20% Glacial Guard Mana Spent To Barrier",
+      "tier": 20,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_crystal_maiden_3",
+      "heroId": 5,
+      "name": "+50 Freezing Field Damage",
+      "tier": 20,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_crystal_maiden_1",
+      "heroId": 5,
+      "name": "+1.0s Frostbite Duration",
+      "tier": 25,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_crystal_maiden_2",
+      "heroId": 5,
+      "name": "+300 Crystal Nova Damage",
+      "tier": 25,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_strength_7",
+      "heroId": 82,
+      "name": "+7 Strength",
+      "tier": 10,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_meepo_3",
+      "heroId": 82,
+      "name": "-1.5s Earthbind Cooldown",
+      "tier": 10,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_evasion_15",
+      "heroId": 82,
+      "name": "+15% Evasion",
+      "tier": 15,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_meepo_2",
+      "heroId": 82,
+      "name": "+40 Poof Damage",
+      "tier": 15,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_unique_meepo_4",
+      "heroId": 82,
+      "name": "Earthbind grants True Strike on Targets",
+      "tier": 20,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_meepo_6",
+      "heroId": 82,
+      "name": "+6 Ransack Health Steal",
+      "tier": 20,
+      "side": 1
+    },
+    {
+      "id": "special_bonus_hp_400",
+      "heroId": 82,
+      "name": "+400 Health",
+      "tier": 25,
+      "side": 0
+    },
+    {
+      "id": "special_bonus_unique_meepo_poof_cast_point",
+      "heroId": 82,
+      "name": "-.75s Poof Cast Duration",
+      "tier": 25,
+      "side": 1
+    }
+  ],
+  "threats": [
+    {
+      "heroId": 25,
+      "abilityId": "lina_dragon_slave",
+      "capability": "magical-burst",
+      "mechanic": "magic-damage",
+      "severity": 3,
+      "lanePressure": 2,
+      "explanation": "Ranged wave and spell damage can force repeated health recovery."
+    },
+    {
+      "heroId": 25,
+      "abilityId": "lina_light_strike_array",
+      "capability": "disables",
+      "mechanic": "non-piercing-disable",
+      "severity": 2,
+      "lanePressure": 1,
+      "explanation": "An area stun can set up follow-up damage."
+    },
+    {
+      "heroId": 25,
+      "abilityId": "lina_laguna_blade",
+      "capability": "single-target-pickoff",
+      "mechanic": "unit-target",
+      "severity": 3,
+      "lanePressure": 0,
+      "explanation": "A targeted burst spell threatens exposed supports."
+    },
+    {
+      "heroId": 5,
+      "abilityId": "crystal_maiden_crystal_nova",
+      "capability": "area-damage",
+      "mechanic": "magic-damage",
+      "severity": 2,
+      "lanePressure": 1,
+      "explanation": "Area spell harassment slows retreat."
+    },
+    {
+      "heroId": 5,
+      "abilityId": "crystal_maiden_frostbite",
+      "capability": "disables",
+      "mechanic": "non-piercing-disable",
+      "severity": 2,
+      "lanePressure": 1,
+      "explanation": "A root can enable follow-up attacks; it does not prohibit every movement or item action."
+    },
+    {
+      "heroId": 2,
+      "abilityId": "axe_berserkers_call",
+      "capability": "initiation",
+      "mechanic": "piercing-disable",
+      "severity": 3,
+      "lanePressure": 2,
+      "explanation": "Berserker\u2019s Call pierces debuff immunity; BKB does not stop the taunt."
+    },
+    {
+      "heroId": 8,
+      "abilityId": "juggernaut_omni_slash",
+      "capability": "physical-damage",
+      "mechanic": "attacks",
+      "severity": 3,
+      "lanePressure": 1,
+      "explanation": "An isolated target can suffer repeated physical attacks."
+    },
+    {
+      "heroId": 86,
+      "abilityId": "rubick_telekinesis",
+      "capability": "disables",
+      "mechanic": "non-piercing-disable",
+      "severity": 2,
+      "lanePressure": 1,
+      "explanation": "Lift controls an exposed target; stolen spell threats are not inferred."
+    },
+    {
+      "heroId": 82,
+      "abilityId": "meepo_earthbind",
+      "capability": "disables",
+      "mechanic": "non-piercing-disable",
+      "severity": 2,
+      "lanePressure": 1,
+      "explanation": "Repeated roots can restrict movement."
+    },
+    {
+      "heroId": 82,
+      "abilityId": "meepo_poof",
+      "capability": "magical-burst",
+      "mechanic": "magic-damage",
+      "severity": 3,
+      "lanePressure": 1,
+      "explanation": "Coordinated clones can deliver spell burst."
+    },
+    {
+      "heroId": 32,
+      "abilityId": "riki_backstab",
+      "capability": "invisibility",
+      "mechanic": "invisibility",
+      "severity": 3,
+      "lanePressure": 1,
+      "explanation": "Cloak and Dagger invisibility requires detection; detection does not disable Tricks of the Trade."
+    },
+    {
+      "heroId": 32,
+      "abilityId": "riki_blink_strike",
+      "capability": "mobility",
+      "mechanic": "gap-close",
+      "severity": 2,
+      "lanePressure": 1,
+      "explanation": "Blink Strike reaches vulnerable backline heroes."
+    },
+    {
+      "heroId": 32,
+      "abilityId": "riki_smoke_screen",
+      "capability": "silences",
+      "mechanic": "non-piercing-disable",
+      "severity": 2,
+      "lanePressure": 1,
+      "explanation": "Smoke Screen silences while inside its area; a basic dispel alone does not remove the ground effect."
+    },
+    {
+      "heroId": 44,
+      "abilityId": "phantom_assassin_immaterial",
+      "capability": "evasion",
+      "mechanic": "evasion",
+      "severity": 3,
+      "lanePressure": 1,
+      "explanation": "Evasion can reduce an attacking core\u2019s damage reliability."
+    },
+    {
+      "heroId": 44,
+      "abilityId": "phantom_assassin_phantom_strike",
+      "capability": "initiation",
+      "mechanic": "gap-close",
+      "severity": 3,
+      "lanePressure": 1,
+      "explanation": "Phantom Strike reaches vulnerable targets."
+    },
+    {
+      "heroId": 44,
+      "abilityId": "phantom_assassin_coup_de_grace",
+      "capability": "physical-damage",
+      "mechanic": "attacks",
+      "severity": 3,
+      "lanePressure": 1,
+      "explanation": "Critical attacks threaten exposed supports."
+    },
+    {
+      "heroId": 12,
+      "abilityId": "phantom_lancer_juxtapose",
+      "capability": "illusions",
+      "mechanic": "illusions",
+      "severity": 3,
+      "lanePressure": 1,
+      "explanation": "Multiple illusions demand compatible area damage rather than single-target burst alone."
+    },
+    {
+      "heroId": 50,
+      "abilityId": "dazzle_shadow_wave",
+      "capability": "healing",
+      "mechanic": "healing",
+      "severity": 2,
+      "lanePressure": 1,
+      "explanation": "Healing can prolong trades; healing reduction does not cancel Shallow Grave."
+    },
+    {
+      "heroId": 75,
+      "abilityId": "silencer_global_silence",
+      "capability": "silences",
+      "mechanic": "dispellable-silence",
+      "severity": 3,
+      "lanePressure": 0,
+      "explanation": "Global Silence can interrupt spell participation and is removable by a suitable basic dispel."
+    },
+    {
+      "heroId": 17,
+      "abilityId": "storm_spirit_ball_lightning",
+      "capability": "mobility",
+      "mechanic": "gap-close",
+      "severity": 3,
+      "lanePressure": 1,
+      "explanation": "Ball Lightning reaches the backline; repositioning is not a hard counter to repeated jumps."
+    },
+    {
+      "heroId": 36,
+      "abilityId": "necrolyte_sadist",
+      "capability": "healing",
+      "mechanic": "healing",
+      "severity": 3,
+      "lanePressure": 2,
+      "explanation": "Recovery can sustain repeated lane trades."
+    },
+    {
+      "heroId": 6,
+      "abilityId": "drow_ranger_marksmanship",
+      "capability": "physical-damage",
+      "mechanic": "attacks",
+      "severity": 3,
+      "lanePressure": 2,
+      "explanation": "Ranged physical attacks punish unprotected supports."
+    },
+    {
+      "heroId": 35,
+      "abilityId": "sniper_take_aim",
+      "capability": "physical-damage",
+      "mechanic": "attacks",
+      "severity": 3,
+      "lanePressure": 2,
+      "explanation": "Long-range attacks threaten exposed targets."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Valve \u00b7 latest patch list",
+      "url": "https://www.dota2.com/datafeed/patchnoteslist",
+      "kind": "game-data"
+    },
+    {
+      "label": "Valve \u00b7 current hero abilities",
+      "url": "https://www.dota2.com/datafeed/herodata?hero_id=5&language=english",
+      "kind": "game-data"
+    },
+    {
+      "label": "Valve \u00b7 current item definitions",
+      "url": "https://www.dota2.com/datafeed/itemdata?item_id=16&language=english",
+      "kind": "game-data"
+    },
+    {
+      "label": "OpenDota constants \u00b7 resolved talent labels",
+      "url": "https://github.com/odota/dotaconstants/tree/5c0242df9057848fa2036ca3fafe9f2bd4508163",
+      "kind": "game-data"
+    }
+  ]
+}

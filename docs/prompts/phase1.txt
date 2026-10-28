@@ -1,0 +1,464 @@
+# Project: Dota 2 Draft & Item Recommendation Assistant
+
+## 1. Project Overview
+
+Build a modern, open-source Dota 2 web application that helps players make informed hero selections, identify strong team compositions, and receive intelligent item recommendations based on the current match.
+
+The application should focus on three primary capabilities:
+
+1. **Meta-based hero selection:** Recommend the top five heroes for the player's selected rank and position.
+2. **Team composition and synergy:** Recommend heroes for remaining team positions based on the player's chosen hero, allied heroes, and enemy selections.
+3. **Adaptive item recommendations:** Suggest item builds for the player's chosen hero that counter the opposing lineup or provide defensive and utility options to protect teammates.
+
+The application is intended to be used while players are drafting or actively playing Dota 2.
+
+Prioritize responsiveness, ease of use, meaningful recommendations, accurate data, and a visually polished interface.
+
+## 2. Technology Stack
+
+Use the following technologies:
+
+**Frontend**
+- Vue 3 with Composition API and `<script setup lang="ts">`
+- Vite
+- TypeScript with strict type checking
+- Tailwind CSS
+- shadcn-vue for reusable UI primitives
+- Pinia for state management
+- Vue Router if additional routes are justified
+- Lucide icons
+
+**Data and recommendation processing**
+- TypeScript-based recommendation engines
+- JSON-based datasets
+- OpenDota as the initial external data source
+- Replaceable data provider architecture
+- Node.js scripts for data ingestion and normalization
+
+**Testing and development**
+- Vitest for unit testing
+- ESLint and Prettier
+- GitHub Actions for future scheduled data updates
+
+**Deployment**
+- Static-hosting compatible
+- GitHub Pages as the initial deployment target
+
+Do not introduce paid services, authentication, databases, Redis, Docker, or a dedicated backend server unless technically necessary.
+
+Prefer mature, actively maintained open-source packages. Use compatible current package versions.
+
+## 3. Design Requirements
+
+Create a polished, dark-themed interface inspired by modern gaming analytics applications.
+
+The design should feel professional, data-driven, and purpose-built for Dota 2.
+
+### Visual direction
+
+- Dark charcoal background with subtle layered surfaces
+- Restrained use of Dota-inspired red accents
+- Clear typography, spacing, and alignment
+- High-quality hero portraits
+- Compact but readable data displays
+- Subtle transitions and hover effects
+- Clear visual differentiation between allied and enemy heroes
+- Consistent spacing, icons, borders, and component states
+- Avoid excessive gradients, glowing effects, oversized cards, and unnecessary decorations
+
+The application should work particularly well on desktop monitors, including smaller secondary monitors that players might use while gaming.
+
+Also provide a responsive mobile layout.
+
+Use efficient layouts that maximize the amount of useful information visible without overwhelming the user.
+
+## 4. Main Application: Draft Assistant
+
+The initial application should center around one primary page containing the complete drafting experience.
+
+### Section A: Player Configuration
+
+Allow the user to select their Dota 2 rank bracket:
+
+- Herald
+- Guardian
+- Crusader
+- Archon
+- Legend
+- Ancient
+- Divine
+- Immortal
+
+Allow the user to select their position:
+
+- Position 1 — Carry
+- Position 2 — Mid
+- Position 3 — Offlane
+- Position 4 — Soft Support
+- Position 5 — Hard Support
+
+Store these selections in Pinia.
+
+The selected rank and position should control the relevant recommendations throughout the application.
+
+### Section B: Top Five Meta Heroes
+
+After selecting their rank and position, display the top five recommended heroes.
+
+Each recommendation should support:
+
+- Hero portrait
+- Hero name
+- Position suitability
+- Win rate, when reliable data is available
+- Pick rate, when available
+- A ranking or recommendation score
+- A concise explanation of why the hero is recommended
+
+Do not rank heroes purely by raw win rate. Consider position suitability, pick rate, sample size, and patch relevance.
+
+Do not invent real statistics.
+
+When live statistical data is unavailable, use clearly labelled demonstration data and never present it as the current meta.
+
+The user must also be able to search and select any available hero, even if that hero is not among the top five recommendations.
+
+### Section C: Hero Selection and Draft Board
+
+Create an interactive draft board containing ten hero slots.
+
+**Allied team**
+- Position 1
+- Position 2
+- Position 3
+- Position 4
+- Position 5
+
+**Enemy team**
+- Five enemy hero slots
+
+The user's own selected hero must automatically populate the correct allied position.
+
+For the remaining slots, implement a searchable hero selector displaying hero portraits and names.
+
+Requirements:
+
+- Heroes can be added, changed, and removed.
+- Prevent duplicate hero selections across the complete draft.
+- Allow partially completed drafts.
+- Clearly distinguish the user's own hero from teammates.
+- Display placeholders for unselected slots.
+- Recommendations should update immediately when selections change.
+- Include a reset draft action.
+- Preserve selected rank and position when resetting only the draft.
+
+Do not require all ten heroes to be selected before showing recommendations.
+
+### Section D: Team Synergy Recommendations
+
+After the user selects their hero, recommend suitable heroes for the remaining allied positions.
+
+For example, when a user selects a position 3 hero, recommend suitable position 1, 2, 4, and 5 heroes that complement that selection.
+
+Initially evaluate recommendations using:
+
+- Hero synergy
+- Complementary abilities
+- Teamfight combinations
+- Lane synergy
+- Hero position suitability
+- Team composition balance
+- Current meta strength, where supported by available data
+- Matchups against already selected enemy heroes
+
+Display recommendations grouped by allied position.
+
+For each recommendation, show:
+
+- Hero portrait and name
+- Target position
+- Recommendation score
+- Short explanation of the synergy
+- Relevant strengths or combinations
+
+As allied and enemy heroes are selected, recalculate recommendations.
+
+A recommendation must explain its reasoning rather than presenting an unexplained number.
+
+Build this as an isolated TypeScript recommendation engine so the algorithms can be improved independently of the UI.
+
+### Section E: Adaptive Item Recommendations
+
+This is a core feature of the application.
+
+Once the user selects their own hero, show suggested item builds.
+
+As enemy and allied heroes are added to the draft, dynamically refine those suggestions.
+
+Organize recommendations into:
+
+1. Starting items
+2. Early-game items
+3. Core items
+4. Situational counter-items
+5. Defensive and team-saving items
+
+Each item recommendation should contain:
+
+- Item icon
+- Item name
+- Priority
+- Category
+- Explanation
+- Relevant enemy or allied heroes that influenced the recommendation
+
+The recommendation engine must identify relevant threats from the opposing lineup.
+
+Examples include:
+
+- High magical damage
+- High physical damage
+- Heavy crowd control
+- Silences
+- Invisibility
+- Illusions
+- High mobility
+- Healing and regeneration
+- Strong initiation
+- Single-target spells
+- Dangerous teamfight abilities
+
+Different positions must receive different recommendation priorities.
+
+**Carry and core roles**
+
+Prioritize survival, damage output, hero compatibility, farming progression, and counters to enemy defensive or offensive capabilities.
+
+**Support roles**
+
+Prioritize cost-effective utility, defensive items, team-saving abilities, vision-related utility, and counters to enemy initiation or damage.
+
+For example, a support facing a lineup with dangerous initiation and magical burst should receive suitable defensive and team-protection suggestions.
+
+Recommendations must consider actual item mechanics and hero compatibility. Do not assume every item can counter every ability in a general category.
+
+Do not recommend every situational item simultaneously. Prioritize the most useful options and explain the tradeoffs.
+
+Separate standard hero builds from opponent-specific adaptations.
+
+Use a deterministic, rule-based recommendation engine for the initial version. Do not introduce AI APIs or machine learning.
+
+## 5. Data Architecture
+
+Build a clean separation between data ingestion, normalized game data, recommendation logic, and UI components.
+
+Create typed data models for:
+
+- Heroes
+- Hero abilities
+- Hero roles and positions
+- Rank brackets
+- Patches
+- Hero meta statistics
+- Hero matchups
+- Hero synergies
+- Items
+- Item mechanics
+- Hero threat classifications
+- Item recommendation rules
+
+Use OpenDota as the initial external statistics provider.
+
+Investigate its available endpoints and document which statistics can actually be retrieved.
+
+Important: OpenDota's aggregate endpoints may not provide every combination of rank, position, patch, and matchup needed for the final product.
+
+Do not fabricate missing data or assume unsupported filtering exists.
+
+Keep the data-provider implementation replaceable so that additional sources or match-level aggregation can be introduced later.
+
+For the initial implementation:
+
+- Provide working local JSON fixtures for development.
+- Clearly identify demonstration data.
+- Include a data provider interface.
+- Prepare the application to consume normalized external datasets.
+- Keep API tokens and secrets out of client-side code.
+- Include metadata describing the source, patch, last updated time, and data limitations.
+
+Item rules and hero threat classifications should be stored separately from statistical data because they require their own patch-specific maintenance.
+
+## 6. Recommendation Engine Architecture
+
+Create three independent engines:
+
+**Meta Engine**
+
+Ranks eligible heroes for a given position and rank based on available statistical data.
+
+**Synergy Engine**
+
+Evaluates how well candidate heroes complement the current allied team and perform against selected enemies.
+
+**Item Engine**
+
+Analyzes the user's selected hero, position, allied team, and enemy lineup to generate prioritized item recommendations.
+
+All engines must:
+
+- Be implemented in TypeScript.
+- Have strongly typed inputs and outputs.
+- Be independent of Vue components.
+- Handle incomplete draft data.
+- Handle missing or unreliable statistics.
+- Return human-readable recommendation explanations.
+- Be deterministic and unit-testable.
+
+Avoid misleading precision. Distinguish heuristic recommendation scores from measured win probabilities.
+
+## 7. Application State
+
+Use Pinia to manage the draft state.
+
+Maintain:
+
+- Selected rank bracket
+- Selected player position
+- Player's selected hero
+- Allied hero selections
+- Enemy hero selections
+- Derived hero recommendations
+- Derived item recommendations
+- Dataset freshness information
+
+Use computed properties and appropriate reactive state handling to update the UI efficiently.
+
+Avoid storing redundant state that can be derived from the draft.
+
+## 8. Code Quality and Project Structure
+
+Use a clear, maintainable folder structure separating:
+
+- Views
+- Components
+- Stores
+- Composables
+- Types
+- Data providers
+- Recommendation engines
+- Static data
+- Utilities
+- Tests
+- Data ingestion scripts
+
+Follow Vue 3 and TypeScript best practices.
+
+Keep components focused and reusable.
+
+Avoid large components that combine data fetching, state management, recommendation calculations, and rendering logic.
+
+Add appropriate error states, empty states, and loading states.
+
+Use accessible interactive controls, keyboard navigation, and clear input labels.
+
+## 9. MVP Scope Restrictions
+
+Do not implement the following yet:
+
+- User registration or authentication
+- Steam account integration
+- Automatic in-game hero detection
+- Real-time Dota client integration
+- Machine-learning models
+- Paid API services
+- Player match-history tracking
+- Monetization
+- Dedicated backend infrastructure
+- Unrelated dashboard pages
+
+Focus on one excellent, functional drafting experience.
+
+## 10. Implementation Instructions
+
+First inspect the existing repository.
+
+If it is empty, initialize the project using the specified stack.
+
+Implement the application incrementally in the following order:
+
+**Phase 1 — Foundation and UI**
+
+1. Initialize Vue 3, Vite, TypeScript, Tailwind CSS, Pinia, and the component system.
+2. Establish the application structure and design tokens.
+3. Create the main Draft Assistant page.
+4. Implement the rank and position selectors.
+5. Implement the searchable hero selector.
+6. Implement the complete ten-slot draft board.
+7. Build the meta hero, synergy, and item recommendation UI sections.
+8. Make the draft interactions functional using clearly labelled local demonstration data.
+
+**Phase 2 — Recommendation engines**
+
+1. Define the normalized hero, item, matchup, and recommendation types.
+2. Implement the meta ranking engine.
+3. Implement the hero synergy engine.
+4. Implement the adaptive item recommendation engine.
+5. Connect the engines to Pinia and the UI.
+6. Add unit tests covering incomplete drafts, duplicate hero prevention, score calculation, and item rule matching.
+
+**Phase 3 — Real data integration**
+
+1. Implement the OpenDota data provider.
+2. Create scripts for fetching and normalizing supported data.
+3. Produce versioned JSON files for the frontend.
+4. Distinguish verified statistics from curated heuristic data.
+5. Display data freshness and patch information.
+6. Prepare GitHub Actions for scheduled updates.
+
+Do not block progress on the UI if a third-party data source is unavailable.
+
+## 11. Acceptance Criteria
+
+The MVP is functional when:
+
+- A user can select their rank and position.
+- Five hero recommendations are displayed using available data or explicitly labelled demonstration data.
+- A user can select any hero as their own pick.
+- The selected hero appears in the correct draft slot.
+- Other allied and enemy heroes can be added, edited, and removed.
+- Hero selections cannot be duplicated.
+- Suitable heroes are recommended for remaining allied positions.
+- Recommendations update when the draft changes.
+- The application recommends a basic item build for the player's hero.
+- Situational items respond to threats in the selected opposing lineup.
+- Supports receive relevant utility and team-saving recommendations.
+- Each recommendation includes a meaningful explanation.
+- The UI works on desktop and mobile.
+- The project builds and type-checks successfully.
+- Core recommendation logic is covered by unit tests.
+
+## 12. Execution Expectations
+
+Do not stop after producing an implementation plan.
+
+Begin implementing the application.
+
+Make reasonable technical decisions where details are unspecified, while following the architectural requirements above.
+
+Prioritize a working, visually polished vertical slice over prematurely implementing every advanced feature.
+
+Use local data fixtures where necessary, but keep all demo statistics clearly labelled.
+
+Do not introduce unnecessary dependencies or services.
+
+At the end of implementation, provide:
+
+- Summary of completed functionality
+- Key architectural decisions
+- Instructions to run the project locally
+- Test and build results
+- Any unfinished work
+- Identified external data limitations
+- Recommended next development steps
+
+Start with Phase 1, establishing the application architecture and creating the complete interactive drafting interface. Continue into subsequent phases only when the current phase is functioning and verified.

@@ -1,0 +1,9 @@
+node_modules
+dist
+package-lock.json
+public/images
+src/data/*.json
+docs/prompts
+LICENSE
+playwright-report
+test-results

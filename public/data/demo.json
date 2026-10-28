@@ -1,0 +1,375 @@
+{
+  "metadata": {
+    "source": "OpenDota hero identities + synthetic hero recommendation fixtures",
+    "sourceUrl": "https://github.com/odota/dotaconstants",
+    "sourceCommit": "5c0242df9057848fa2036ca3fafe9f2bd4508163",
+    "updatedAt": "2026-10-28",
+    "patch": "Hero suggestions: demo \u00b7 build patch shown separately",
+    "demonstration": true,
+    "limitations": [
+      "Hero recommendation scores and rank-dependent ordering are synthetic examples, not measured performance.",
+      "No win rates, pick rates, samples, or live meta statistics are included.",
+      "Hero synergy previews use partial curated profiles, not a validated matchup model.",
+      "Item and skill plans use separate reviewed guides and verified game-data snapshots; see the full planner for their patch and limitations.",
+      "The bundled hero roster is a pinned identity snapshot, not a live feed."
+    ]
+  },
+  "profiles": {
+    "8": {
+      "positions": [1],
+      "strengths": ["Physical damage", "Frontline"],
+      "threats": ["physical"],
+      "explanation": "Adds sustained physical damage behind allied initiation."
+    },
+    "42": {
+      "positions": [1],
+      "strengths": ["Physical damage", "Frontline"],
+      "threats": ["physical"],
+      "explanation": "Adds sustained physical damage behind allied initiation."
+    },
+    "18": {
+      "positions": [1],
+      "strengths": ["Physical damage", "Frontline"],
+      "threats": ["physical"],
+      "explanation": "Adds sustained physical damage behind allied initiation."
+    },
+    "6": {
+      "positions": [1],
+      "strengths": ["Ranged damage", "Tower pressure"],
+      "threats": ["physical"],
+      "explanation": "Adds ranged damage and objective pressure to the lineup."
+    },
+    "48": {
+      "positions": [1],
+      "strengths": ["Ranged damage", "Tower pressure"],
+      "threats": ["physical"],
+      "explanation": "Adds ranged damage and objective pressure to the lineup."
+    },
+    "72": {
+      "positions": [1],
+      "strengths": ["Ranged damage", "Tower pressure"],
+      "threats": ["physical"],
+      "explanation": "Adds ranged damage and objective pressure to the lineup."
+    },
+    "1": {
+      "positions": [1],
+      "strengths": ["Sustained damage", "Scaling"],
+      "threats": ["physical", "mobility"],
+      "explanation": "Provides a scaling damage role; needs space and allied control."
+    },
+    "54": {
+      "positions": [1],
+      "strengths": ["Sustained damage", "Scaling"],
+      "threats": ["physical", "mobility"],
+      "explanation": "Provides a scaling damage role; needs space and allied control."
+    },
+    "70": {
+      "positions": [1],
+      "strengths": ["Sustained damage", "Scaling"],
+      "threats": ["physical", "mobility"],
+      "explanation": "Provides a scaling damage role; needs space and allied control."
+    },
+    "93": {
+      "positions": [1],
+      "strengths": ["Sustained damage", "Scaling"],
+      "threats": ["physical", "mobility"],
+      "explanation": "Provides a scaling damage role; needs space and allied control."
+    },
+    "44": {
+      "positions": [1],
+      "strengths": ["Backline access", "Scaling"],
+      "threats": ["physical"],
+      "explanation": "Threatens vulnerable backline heroes after allied initiation."
+    },
+    "67": {
+      "positions": [1],
+      "strengths": ["Backline access", "Scaling"],
+      "threats": ["physical"],
+      "explanation": "Threatens vulnerable backline heroes after allied initiation."
+    },
+    "12": {
+      "positions": [1],
+      "strengths": ["Illusions", "Sustained damage"],
+      "threats": ["illusions", "physical"],
+      "explanation": "Adds illusion pressure; benefits from setup and protection."
+    },
+    "89": {
+      "positions": [1],
+      "strengths": ["Illusions", "Sustained damage"],
+      "threats": ["illusions", "physical"],
+      "explanation": "Adds illusion pressure; benefits from setup and protection."
+    },
+    "81": {
+      "positions": [1],
+      "strengths": ["Illusions", "Sustained damage"],
+      "threats": ["illusions", "physical"],
+      "explanation": "Adds illusion pressure; benefits from setup and protection."
+    },
+    "13": {
+      "positions": [2],
+      "strengths": ["Mobility", "Backline access"],
+      "threats": ["magic", "mobility"],
+      "explanation": "Adds a mobile playmaker to follow allied initiation."
+    },
+    "17": {
+      "positions": [2],
+      "strengths": ["Mobility", "Backline access"],
+      "threats": ["magic", "mobility"],
+      "explanation": "Adds a mobile playmaker to follow allied initiation."
+    },
+    "39": {
+      "positions": [2],
+      "strengths": ["Mobility", "Backline access"],
+      "threats": ["magic", "mobility"],
+      "explanation": "Adds a mobile playmaker to follow allied initiation."
+    },
+    "106": {
+      "positions": [2],
+      "strengths": ["Mobility", "Backline access"],
+      "threats": ["magic", "mobility"],
+      "explanation": "Adds a mobile playmaker to follow allied initiation."
+    },
+    "126": {
+      "positions": [2],
+      "strengths": ["Mobility", "Backline access"],
+      "threats": ["magic", "mobility"],
+      "explanation": "Adds a mobile playmaker to follow allied initiation."
+    },
+    "25": {
+      "positions": [2],
+      "strengths": ["Spell damage", "Wave clear"],
+      "threats": ["magic"],
+      "explanation": "Adds ranged spell damage and wave clear behind a frontline."
+    },
+    "22": {
+      "positions": [2],
+      "strengths": ["Spell damage", "Wave clear"],
+      "threats": ["magic"],
+      "explanation": "Adds ranged spell damage and wave clear behind a frontline."
+    },
+    "52": {
+      "positions": [2],
+      "strengths": ["Spell damage", "Wave clear"],
+      "threats": ["magic"],
+      "explanation": "Adds ranged spell damage and wave clear behind a frontline."
+    },
+    "49": {
+      "positions": [2, 3],
+      "strengths": ["Frontline", "Control"],
+      "threats": ["control", "physical"],
+      "explanation": "Offers a durable frontline and setup for allied damage."
+    },
+    "23": {
+      "positions": [2, 3],
+      "strengths": ["Frontline", "Control"],
+      "threats": ["control", "physical"],
+      "explanation": "Offers a durable frontline and setup for allied damage."
+    },
+    "2": {
+      "positions": [3],
+      "strengths": ["Initiation", "Teamfight"],
+      "threats": ["control"],
+      "explanation": "Provides frontline initiation for allies to follow up."
+    },
+    "96": {
+      "positions": [3],
+      "strengths": ["Initiation", "Teamfight"],
+      "threats": ["control"],
+      "explanation": "Provides frontline initiation for allies to follow up."
+    },
+    "129": {
+      "positions": [3],
+      "strengths": ["Initiation", "Teamfight"],
+      "threats": ["control"],
+      "explanation": "Provides frontline initiation for allies to follow up."
+    },
+    "29": {
+      "positions": [3],
+      "strengths": ["Initiation", "Teamfight"],
+      "threats": ["control"],
+      "explanation": "Provides frontline initiation for allies to follow up."
+    },
+    "97": {
+      "positions": [3, 4],
+      "strengths": ["Area control", "Teamfight"],
+      "threats": ["control", "magic"],
+      "explanation": "Adds area control to set up allied teamfight damage."
+    },
+    "16": {
+      "positions": [3, 4],
+      "strengths": ["Area control", "Teamfight"],
+      "threats": ["control", "magic"],
+      "explanation": "Adds area control to set up allied teamfight damage."
+    },
+    "7": {
+      "positions": [3, 4],
+      "strengths": ["Area control", "Teamfight"],
+      "threats": ["control", "magic"],
+      "explanation": "Adds area control to set up allied teamfight damage."
+    },
+    "108": {
+      "positions": [3],
+      "strengths": ["Frontline", "Objective pressure"],
+      "threats": ["control"],
+      "explanation": "Adds a frontline presence and helps the team hold territory."
+    },
+    "38": {
+      "positions": [3],
+      "strengths": ["Frontline", "Objective pressure"],
+      "threats": ["control"],
+      "explanation": "Adds a frontline presence and helps the team hold territory."
+    },
+    "86": {
+      "positions": [4, 5],
+      "strengths": ["Control", "Spell damage"],
+      "threats": ["magic", "control"],
+      "explanation": "Adds follow-up control and spell damage from a support position."
+    },
+    "26": {
+      "positions": [4, 5],
+      "strengths": ["Control", "Spell damage"],
+      "threats": ["magic", "control"],
+      "explanation": "Adds follow-up control and spell damage from a support position."
+    },
+    "27": {
+      "positions": [4, 5],
+      "strengths": ["Control", "Spell damage"],
+      "threats": ["magic", "control"],
+      "explanation": "Adds follow-up control and spell damage from a support position."
+    },
+    "64": {
+      "positions": [4, 5],
+      "strengths": ["Control", "Spell damage"],
+      "threats": ["magic", "control"],
+      "explanation": "Adds follow-up control and spell damage from a support position."
+    },
+    "5": {
+      "positions": [5],
+      "strengths": ["Lane support", "Spell damage"],
+      "threats": ["magic", "control"],
+      "explanation": "Offers lane support and follow-up spell damage behind allies."
+    },
+    "31": {
+      "positions": [5],
+      "strengths": ["Lane support", "Spell damage"],
+      "threats": ["magic", "control"],
+      "explanation": "Offers lane support and follow-up spell damage behind allies."
+    },
+    "30": {
+      "positions": [5],
+      "strengths": ["Lane support", "Spell damage"],
+      "threats": ["magic", "control"],
+      "explanation": "Offers lane support and follow-up spell damage behind allies."
+    },
+    "50": {
+      "positions": [4, 5],
+      "strengths": ["Protection", "Sustain"],
+      "threats": ["healing"],
+      "explanation": "Adds protection and sustain for allied damage dealers."
+    },
+    "111": {
+      "positions": [4, 5],
+      "strengths": ["Protection", "Sustain"],
+      "threats": ["healing"],
+      "explanation": "Adds protection and sustain for allied damage dealers."
+    },
+    "102": {
+      "positions": [4, 5],
+      "strengths": ["Protection", "Sustain"],
+      "threats": ["healing"],
+      "explanation": "Adds protection and sustain for allied damage dealers."
+    },
+    "20": {
+      "positions": [4],
+      "strengths": ["Initiation", "Control"],
+      "threats": ["control"],
+      "explanation": "Offers support initiation and follow-up control for teammates."
+    },
+    "100": {
+      "positions": [4],
+      "strengths": ["Initiation", "Control"],
+      "threats": ["control"],
+      "explanation": "Offers support initiation and follow-up control for teammates."
+    },
+    "51": {
+      "positions": [4],
+      "strengths": ["Initiation", "Control"],
+      "threats": ["control"],
+      "explanation": "Offers support initiation and follow-up control for teammates."
+    },
+    "37": {
+      "positions": [5],
+      "strengths": ["Protection", "Teamfight"],
+      "threats": ["control", "healing"],
+      "explanation": "Offers teamfight support and protection for allied cores."
+    },
+    "83": {
+      "positions": [5],
+      "strengths": ["Protection", "Teamfight"],
+      "threats": ["control", "healing"],
+      "explanation": "Offers teamfight support and protection for allied cores."
+    },
+    "112": {
+      "positions": [5],
+      "strengths": ["Protection", "Teamfight"],
+      "threats": ["control", "healing"],
+      "explanation": "Offers teamfight support and protection for allied cores."
+    },
+    "32": {
+      "positions": [1, 4],
+      "strengths": ["Backline access", "Scouting"],
+      "threats": ["invisibility", "physical"],
+      "explanation": "Creates a detection planning example with invisibility pressure."
+    },
+    "56": {
+      "positions": [1, 4],
+      "strengths": ["Backline access", "Scouting"],
+      "threats": ["invisibility", "physical"],
+      "explanation": "Creates a detection planning example with invisibility pressure."
+    },
+    "62": {
+      "positions": [1, 4],
+      "strengths": ["Backline access", "Scouting"],
+      "threats": ["invisibility", "physical"],
+      "explanation": "Creates a detection planning example with invisibility pressure."
+    },
+    "75": {
+      "positions": [4],
+      "strengths": ["Spell damage", "Silence"],
+      "threats": ["silence", "magic"],
+      "explanation": "Creates a spell damage and silence planning example."
+    },
+    "101": {
+      "positions": [4],
+      "strengths": ["Spell damage", "Silence"],
+      "threats": ["silence", "magic"],
+      "explanation": "Creates a spell damage and silence planning example."
+    },
+    "36": {
+      "positions": [3],
+      "strengths": ["Frontline", "Sustain"],
+      "threats": ["healing"],
+      "explanation": "Creates a sustain planning example; specific counters need verification."
+    },
+    "99": {
+      "positions": [3],
+      "strengths": ["Frontline", "Sustain"],
+      "threats": ["healing"],
+      "explanation": "Creates a sustain planning example; specific counters need verification."
+    }
+  },
+  "metaByPosition": {
+    "1": [8, 6, 42, 48, 18, 1, 70, 44, 54, 93],
+    "2": [13, 25, 17, 22, 39, 49, 23, 106, 126, 52],
+    "3": [2, 96, 129, 29, 97, 108, 38, 49, 16, 7],
+    "4": [86, 20, 100, 26, 51, 64, 27, 50, 111, 7],
+    "5": [5, 31, 50, 37, 30, 83, 112, 64, 26, 111]
+  },
+  "synergyByPosition": {
+    "1": [8, 6, 42, 48, 18, 70, 1],
+    "2": [25, 13, 17, 22, 39, 49, 23],
+    "3": [29, 2, 96, 129, 97, 108, 38],
+    "4": [20, 86, 100, 26, 51, 64, 50],
+    "5": [5, 50, 31, 37, 30, 83, 112]
+  }
+}

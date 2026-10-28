@@ -1,0 +1,658 @@
+# AegisPath — Phase 2: Matchup-Adaptive Build & Skill Planner
+
+## Objective
+
+Enhance the existing AegisPath application by replacing the current basic item recommendation system with a complete, matchup-aware item and ability progression planner.
+
+Phase 1 is already implemented. Inspect the existing codebase, understand its architecture, reuse its current components, data models, stores, and design system, and extend the existing functionality.
+
+Do not rebuild the application or unnecessarily redesign the existing draft interface.
+
+The application must help a player understand:
+
+1. How they should approach their lane.
+2. Exactly which items to purchase before the game starts.
+3. Which items to purchase throughout the match, and in what order.
+4. Which six items should ideally occupy their main inventory in the late game.
+5. Which abilities and talents to select at each level.
+6. How their itemization and ability choices should adapt to the allied and enemy hero lineup.
+
+The goal is not to create a generic item guide. It is to generate a coherent, personalized match plan for the user's selected hero and position.
+
+---
+
+## 1. Laning Strategy Analysis
+
+Introduce a dedicated laning strategy system.
+
+After the user selects their hero, position, and available enemy/allied heroes, analyze the matchup to determine the most suitable laning approach.
+
+Support the following strategies:
+
+**Aggressive**
+- Prioritize early trading, lane pressure, kill potential, and securing a lane advantage.
+- Recommend suitable early stats, regeneration, and offensive utility.
+- Prioritize relevant offensive or control abilities when appropriate.
+
+**Defensive**
+- Prioritize surviving unfavorable matchups, avoiding unnecessary engagements, and mitigating enemy harassment.
+- Recommend appropriate sustain, defensive stats, and escape or protection options.
+- Prioritize relevant defensive abilities when appropriate.
+
+**Passive / Sustain / Farming**
+- Prioritize stable farming, experience gain, efficient resources, and scaling.
+- Recommend starting items that allow sustained laning and efficient progression toward core items.
+- Prioritize abilities that improve farming, lane sustain, or safe positioning.
+
+These are strategic classifications, not rigid hero archetypes. A traditionally aggressive hero can require a defensive approach against a difficult lineup.
+
+### Lane matchup awareness
+
+Distinguish the player's expected lane opponents from the complete enemy team.
+
+For example:
+- Position 1 and Position 5 generally evaluate the opposing offlane duo.
+- Position 2 evaluates the opposing mid hero.
+- Position 3 and Position 4 generally evaluate the opposing safelane duo.
+
+Only use these assumptions when enemy positions are known or reliably assigned.
+
+Extend the draft board data model to support optional enemy position assignments if necessary.
+
+If the enemy positions are unknown, indicate that the lane matchup is estimated and avoid confidently assigning specific opponents.
+
+### Strategy UI
+
+Show a compact strategy summary containing:
+
+- Recommended approach: Aggressive, Defensive, or Sustain/Farming
+- Matchup assessment
+- Primary lane threats
+- Key advantages
+- Recommended actions during the first several minutes
+- Explanation of why the strategy was selected
+
+Allow the user to override the automatically recommended strategy.
+
+Provide four selection options:
+
+- Auto
+- Aggressive
+- Defensive
+- Sustain / Farming
+
+An override must update the starting items and relevant skill recommendations without changing the selected heroes.
+
+---
+
+## 2. Complete Starting Item Builds
+
+The current starting item section is insufficient.
+
+Replace it with a complete starting purchase recommendation.
+
+For every supported hero and position, maintain a baseline starting build that represents an appropriate, coherent opening purchase.
+
+Adapt that build according to the chosen laning strategy and matchup.
+
+### Requirements
+
+Display:
+
+- All recommended starting items
+- Item icons
+- Item quantities
+- Individual and total purchase costs
+- Remaining starting gold
+- A brief explanation of the overall purchase strategy
+- Reasons for important matchup-specific substitutions
+
+Use current item prices from the game data.
+
+The full starting purchase must fit the applicable starting gold budget. For a standard match, use the current verified starting gold amount rather than a hardcoded assumption that cannot change with patches.
+
+Do not include freely granted starting items as purchases.
+
+Account for stackable items and charges correctly.
+
+Consider the main inventory's capacity and any applicable special slots.
+
+### Build generation
+
+Do not simply return the five most popular cheap items.
+
+The engine must produce a deliberate combination of purchases that work together.
+
+Examples of factors to consider:
+
+- Hero position
+- Attack range
+- Last-hitting requirements
+- Expected harassment
+- Enemy damage types
+- Mana requirements
+- Regeneration needs
+- Lane kill potential
+- Support responsibilities
+- Existing starting item dependencies
+
+A support's starting items should reflect their lane responsibilities.
+
+A carry's starting items should reflect farming, lane pressure, sustain, or last-hitting needs.
+
+The selected laning strategy should produce meaningful differences when alternative starting purchases are justified.
+
+Do not automatically change items merely to make the strategies appear different.
+
+### UI
+
+Display the starting items as a grouped purchase set rather than a vertical list of unrelated recommendations.
+
+Include the total gold spent and the strategic purpose of the build.
+
+---
+
+## 3. Full Match Item Progression
+
+Replace the existing independent item-category lists with an ordered build progression.
+
+The user should be able to follow the entire recommended item path from the beginning of the match to a hypothetical late-game six-slot inventory.
+
+### Stages
+
+**Stage 1 — Starting inventory**
+- Complete starting purchase.
+- Laning strategy explanation.
+
+**Stage 2 — Laning phase**
+- Initial consumable replenishment.
+- Early components.
+- Boots and early stat/utility items.
+- Specific early power spikes.
+
+**Stage 3 — Early game**
+- First completed important items.
+- Farming, fighting, or utility objectives.
+- Recommended purchase order.
+
+**Stage 4 — Midgame**
+- Main hero-defining items.
+- Counter-items addressing the enemy lineup.
+- Teamfight and survivability considerations.
+
+**Stage 5 — Late game**
+- Major upgrades.
+- Strong situational purchases.
+- Items to replace or sell.
+- Optional item paths depending on game state.
+
+**Stage 6 — Final six-slot inventory**
+- A complete six-item main-inventory target.
+- Every final item must follow logically from the recommended build progression.
+- Explain why these items were selected.
+- Identify essential items versus matchup-specific choices.
+
+### Important rules
+
+Item progression must form a coherent purchase path.
+
+For example, if an early item upgrades into a completed item, do not count both as separate final inventory slots.
+
+Similarly:
+- Avoid duplicate unique items where inappropriate.
+- Do not count consumed items as permanent inventory slots.
+- Do not count TP-scroll, neutral-item, or other special inventory slots as part of the six main slots.
+- Account for component upgrades and item replacements.
+- Consider Aghanim's Scepter and Shard where appropriate.
+- Ensure items are valid and purchasable in the current patch.
+
+The six-slot build represents an eventual late-game goal, not a claim that every game will reach six completed items.
+
+For supports, the build should remain economically realistic. Explain which high-cost items are luxury purchases and which utility items should take priority.
+
+### Item timing
+
+Support estimated purchase timings when trustworthy data is available.
+
+Do not invent precise timing estimates from item popularity.
+
+When reliable timing data is unavailable, use relative progression such as:
+
+- First purchase
+- First major item
+- Next power spike
+- Midgame priority
+- Late-game luxury
+
+Optional future enhancements may account for current gold, net worth, and in-game time.
+
+---
+
+## 4. Situational Item Decision-Making
+
+Build a rule-based counter-item engine that evaluates the enemy lineup and the player's role.
+
+Classify relevant enemy capabilities, including:
+
+- Magical burst
+- Physical damage
+- Sustained damage
+- Disables
+- Silences
+- Initiation
+- Mobility
+- Invisibility
+- Illusions
+- Summons
+- Healing and regeneration
+- Evasion
+- High armor
+- Spell resistance
+- Spell reflection and protection
+- Single-target pickoff
+- Area-of-effect teamfight damage
+
+Every recommendation must have a specific reason.
+
+### Recommendation priorities
+
+Evaluate:
+
+1. How severe the relevant enemy threat is.
+2. How well an item addresses that threat.
+3. Whether the item is suitable for the user's hero.
+4. Whether it suits the player's position and expected economy.
+5. Whether an existing core item already addresses the same problem.
+6. Whether the item provides useful offensive or defensive synergy.
+7. Whether the item creates an important power spike.
+
+Do not recommend an item based solely on a generic threat tag.
+
+Match recommendations to actual game mechanics.
+
+### Different role priorities
+
+**Positions 1–3**
+
+Prioritize suitable damage, farming, initiation, durability, and counter-item progression according to the hero's role.
+
+**Positions 4–5**
+
+Prioritize utility, survivability, team protection, positioning, control, and affordable counters.
+
+A support should frequently receive team-saving recommendations when the enemy lineup warrants them.
+
+For each significant recommendation, explain:
+
+- What problem it solves.
+- Which enemy heroes or abilities make it useful.
+- Whether it is an essential purchase or situational alternative.
+- Why it should be purchased at that stage.
+
+### Conditional purchase branches
+
+Support alternative purchases without breaking the main recommended build.
+
+For example:
+
+"Purchase Item A as the default. Consider Item B earlier if enemy magical burst is preventing your team from fighting."
+
+Only implement such conditions when justified by the actual item mechanics.
+
+Show one recommended primary progression with clearly identifiable alternative branches.
+
+---
+
+## 5. Ability and Talent Build Planner
+
+Introduce a complete ability progression section.
+
+This should be integrated into the build planner and update with the selected hero and matchup.
+
+### Requirements
+
+Display a recommended level-by-level progression covering levels 1–30 where supported by current patch rules.
+
+Include:
+
+- Ability icon
+- Ability name
+- Level at which to upgrade
+- Skill upgrade order
+- Ultimate progression
+- Talent choices
+- Attribute bonus selections, where applicable
+- Innate ability information
+
+Distinguish abilities acquired automatically from choices requiring skill points.
+
+Do not treat talent selection as ordinary ability-point spending when the current patch uses separate talent points.
+
+Use the current Dota 2 patch's leveling rules.
+
+Do not implement outdated facets from pre-7.41 builds.
+
+### Matchup-aware ability choices
+
+The skill build should respond to:
+
+- Laning strategy
+- Opposing lane heroes
+- Hero position
+- Required early damage
+- Required control
+- Required sustain
+- Defensive or escape needs
+- Farming requirements
+- Midgame fighting requirements
+
+For example, a difficult lane may justify investing earlier in defensive or sustaining abilities rather than using the same offensive skill build in every match.
+
+Do not change skill orders arbitrarily. Every alternative sequence must remain legal and strategically meaningful.
+
+### Ability recommendation UI
+
+Create a visual skill progression displaying level numbers and recommended abilities.
+
+A compact grid is preferred.
+
+Include explanations for significant decisions:
+
+- Why the first ability is recommended
+- Why a particular ability should be maximized first
+- Why an alternative skill build may be appropriate
+- Why each major talent is selected
+- Which enemy heroes influence those decisions
+
+Show the recommended innate ability information separately from actual level-up selections.
+
+Support hero-specific mechanics rather than assuming every hero follows the same traditional three-basic-abilities-plus-ultimate structure.
+
+---
+
+## 6. Unified Build Generation
+
+The starting items, item progression, and skill progression must not operate as unrelated systems.
+
+Create a unified build planner that uses the same match context.
+
+Inputs should include:
+
+- Selected hero
+- Selected position
+- Rank bracket
+- Allied heroes
+- Enemy heroes
+- Known lane assignments
+- Automatically selected or overridden laning strategy
+- Current patch
+- Available statistical and curated guide data
+
+Output should include:
+
+- Laning strategy assessment
+- Complete starting purchase
+- Ordered item progression
+- Situational alternatives
+- Final six-slot inventory
+- Ability upgrade progression
+- Talent recommendations
+- Human-readable explanations
+- Data source and confidence information
+
+Use separate internal recommendation engines where appropriate, but expose a unified typed build-plan model to the UI.
+
+All outputs must be deterministic for the same input data.
+
+### Reactivity
+
+The plan must update when:
+
+- The user's hero changes.
+- The position changes.
+- The selected rank changes where supported by data.
+- An allied hero is selected or removed.
+- An enemy hero is selected or removed.
+- An enemy's assigned position changes.
+- The user overrides the laning strategy.
+
+Recalculate only the necessary parts of the plan and avoid unnecessary expensive computation.
+
+When insufficient matchup information exists, use a baseline hero-and-position build.
+
+Refine the plan progressively as more information becomes available.
+
+---
+
+## 7. Data Accuracy and Open-Source Requirements
+
+The project should remain open-source-first, without introducing paid AI services or unnecessary backend infrastructure.
+
+Use a hybrid recommendation system:
+
+**Verified game data**
+- Hero abilities
+- Ability mechanics
+- Item costs
+- Item mechanics
+- Available talents
+- Patch-specific leveling rules
+
+**Statistical information**
+- Common item purchases
+- Hero-specific item popularity
+- Matchup performance
+- Available ability-upgrade histories
+- Rank and position statistics, where sufficiently supported
+
+**Curated recommendation rules**
+- Hero-specific baseline builds
+- Laning styles
+- Item-counter relationships
+- Synergy rules
+- Role-specific priorities
+- Ability-build variants
+
+Investigate the available OpenDota endpoints and Valve game data before making assumptions about data availability.
+
+OpenDota's item-popularity aggregates must not be treated as complete, ordered, matchup-specific item builds.
+
+Use detailed match-level information where necessary and available.
+
+Maintain explicit source and patch metadata.
+
+### No fabricated recommendations
+
+Do not generate arbitrary hero builds just to populate the interface.
+
+If verified or curated build data is unavailable for a hero:
+
+- Display a clearly labelled limited recommendation.
+- Do not invent detailed abilities or item mechanics.
+- Do not pretend the result is patch-validated.
+- Provide a fallback only when the fallback is strategically defensible.
+
+Keep existing demo datasets clearly labelled until they are replaced.
+
+Prioritize implementing complete, meaningful recommendation examples across the five positions, including the currently selected hero in the existing demo.
+
+Design the data model so additional hero-specific builds can be added without modifying UI components or core engine code.
+
+---
+
+## 8. User Interface Changes
+
+Retain AegisPath's current dark visual identity, typography, spacing conventions, and overall drafting experience.
+
+The existing narrow "Build for the game" side panel should be improved because it cannot comfortably accommodate a complete build timeline and ability progression.
+
+### Suggested layout
+
+Keep the draft board and hero recommendations in their existing main workspace.
+
+Use the current right-side build area for a concise overview:
+
+- Laning strategy
+- Starting items
+- Next recommended items
+- Top counter-item priority
+
+Introduce an expanded build planner below the main draft workspace, or another clearly accessible full-width area.
+
+Use two main tabs:
+
+**Item Build**
+- Complete starting inventory
+- Early-to-late progression
+- Primary purchase order
+- Situational alternatives
+- Final six-slot build
+
+**Skill Build**
+- Level-by-level ability progression
+- Talent selections
+- Innate ability information
+- Matchup-specific explanations
+
+The build planner should be easy to read while playing Dota 2 on another monitor.
+
+Prefer item and ability icons over excessively long text lists.
+
+Use tooltips, expandable explanations, and compact visual progression components.
+
+Show the player's selected hero prominently at the top of the build planner.
+
+Provide appropriate loading, empty, missing-data, and stale-data states.
+
+---
+
+## 9. Testing Requirements
+
+Add comprehensive Vitest tests for the new recommendation systems.
+
+At minimum, validate:
+
+### Starting inventory
+- Total purchase cost does not exceed available starting gold.
+- Starting item quantities are handled correctly.
+- Starting items change appropriately for different laning strategies.
+- Builds remain valid when enemy lane information is incomplete.
+
+### Item progression
+- Item components and upgrades form valid purchase paths.
+- Final inventory contains at most six main-slot items.
+- Consumables are not counted as permanent six-slot items.
+- Counter-items address relevant enemy threats.
+- Role-specific item priorities work correctly.
+- Situational alternatives do not contradict the primary progression.
+
+### Ability progression
+- All ability references belong to the selected hero.
+- Skill upgrades follow the patch's legal leveling rules.
+- No ability exceeds its permitted level.
+- Ultimates, talents, and attributes are handled correctly.
+- Matchup variations produce valid alternative skill orders.
+- Heroes with unusual abilities are supported.
+
+### State and integration
+- Changing selected heroes recalculates the plan.
+- Removing an enemy removes recommendations that depended solely on that enemy.
+- Changing the laning strategy updates relevant recommendations.
+- Incomplete drafts do not cause errors.
+- Switching between different heroes does not leak previous recommendations.
+
+Use the existing demo draft as one integration scenario and add representative test scenarios for all five positions.
+
+---
+
+## 10. Acceptance Criteria
+
+The implementation is complete when:
+
+1. Selecting a hero generates a coherent baseline starting build.
+2. The starting items are displayed together with quantities and total gold cost.
+3. The application identifies and explains an appropriate laning strategy.
+4. The user can override the laning strategy.
+5. Item recommendations adapt to the known allied and enemy lineup.
+6. The entire item purchase progression is visible.
+7. A valid late-game six-slot inventory is displayed.
+8. Core items, situational alternatives, and item replacements are clearly distinguished.
+9. A legal, hero-specific ability progression is displayed.
+10. The skill build includes relevant talent choices and explanations.
+11. Changing the draft updates the applicable recommendations.
+12. The recommendations retain accurate source and patch information.
+13. All relevant unit tests pass.
+14. Existing Phase 1 functionality remains working.
+15. The visual design remains consistent with the current application.
+
+---
+
+## 11. Implementation Instructions
+
+First inspect the repository and identify the current:
+
+- Item recommendation implementation
+- Recommendation data structures
+- Draft state management
+- Hero and item data sources
+- Existing item recommendation UI
+- Current test coverage
+
+Identify which components can be extended and which should be replaced.
+
+Do not duplicate existing functionality unnecessarily.
+
+Implement in this order:
+
+**Step 1 — Data foundation**
+- Extend the typed recommendation models.
+- Add game item and ability definitions.
+- Add hero-specific baseline build templates.
+- Add patch-aware validation.
+
+**Step 2 — Strategy and starting inventory**
+- Implement matchup analysis.
+- Implement laning strategy classification.
+- Implement the starting purchase generator and budget validation.
+
+**Step 3 — Full item planner**
+- Implement ordered item progression.
+- Implement situational item branches.
+- Implement the final six-slot inventory calculation.
+- Add explanatory recommendation metadata.
+
+**Step 4 — Ability planner**
+- Implement legal ability progression.
+- Implement matchup-aware ability-build variations.
+- Include talents, innates, and applicable attribute bonuses.
+
+**Step 5 — UI integration**
+- Improve the compact build summary.
+- Create the expanded build planner.
+- Add item and skill tabs.
+- Connect all recommendations to draft state.
+
+**Step 6 — Validation**
+- Add tests for all new engines.
+- Verify representative builds manually.
+- Run linting, TypeScript checking, tests, and production build.
+- Fix regressions before completing the task.
+
+Do not stop after producing a plan. Begin implementing the features in the existing repository.
+
+If external data is insufficient for complete all-hero coverage, deliver a functioning, verified vertical slice with clearly documented coverage limitations rather than generating unsupported recommendations.
+
+Finally, summarize the architecture, implemented features, validated heroes, test results, and remaining data limitations.
+
+One additional recommendation
+I would make the build planner a full-width component below the drafting workspace, rather than trying to fit everything into the narrow right-hand panel shown in your screenshot.
+
+The right panel can remain useful for quick consultation during a match, but the expanded section should provide the full progression.
+
+That separation gives AegisPath two useful experiences: a quick-reference assistant during gameplay and a detailed preparation tool before a match.
+
+For game data, the open-source dotaconstants project exposes hero abilities and item definitions, while OpenDota provides purchase-popularity data. The latter is useful evidence for builds, but it cannot by itself establish an optimal, matchup-specific purchase order. 
+GitHub+1
+
+
+I would make the starting inventory generator and complete item timeline the next development priority, followed by the ability progression system. Those features will make AegisPath substantially more useful than its current demonstration build panel.

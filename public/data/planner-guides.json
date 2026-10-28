@@ -1,0 +1,1928 @@
+{
+  "guides": [
+    {
+      "id": "8-1",
+      "heroId": 8,
+      "positions": [1],
+      "patch": "7.41f",
+      "title": "Juggernaut \u00b7 Farming carry",
+      "preferredStrategy": "sustain",
+      "laneStrength": 2,
+      "advantages": [
+        "Blade Fury offers early spell pressure.",
+        "Healing Ward supports lane recovery."
+      ],
+      "starting": {
+        "sustain": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "slippers",
+              "quantity": 1,
+              "reason": "Starting agility for damage and last hitting."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Keep enough regeneration for stable experience and last hits while preserving resources for the first item."
+        },
+        "aggressive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 1,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "orb_of_venom",
+              "quantity": 1,
+              "reason": "Trading slow for a melee carry when a kill lane is plausible; give up some starting stats."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 1,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Invest in early trading and a realistic kill attempt without dropping basic regeneration."
+        },
+        "defensive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "flask",
+              "quantity": 1,
+              "reason": "Reserve a larger heal for a safe reset after heavy harassment."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Bring extra health recovery, avoid extended trades, and reset before returning for experience."
+        }
+      },
+      "steps": [
+        {
+          "itemId": "tango",
+          "stage": "Laning phase",
+          "reason": "Replenish health recovery as needed; use existing charges before buying more.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "boots",
+          "stage": "Laning phase",
+          "reason": "Movement before committing to a boot upgrade.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_stick",
+          "stage": "Laning phase",
+          "reason": "Early reactive sustain against spell casts; avoid delaying the hero\u2019s first major item.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_wand",
+          "stage": "Laning phase",
+          "reason": "Complete the sustain item using the stick and starting branches.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "phase_boots",
+          "stage": "Early game",
+          "reason": "Armor and movement for melee positioning.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "bfury",
+          "stage": "Early game",
+          "reason": "Cleave-based farming investment; choose safe farm before seeking fights.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "manta",
+          "stage": "Midgame",
+          "reason": "Damage and illusions with a basic dispel; not an answer to every disable.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "abyssal_blade",
+          "stage": "Late game",
+          "reason": "Reliable close-range control once damage and survival are covered.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "butterfly",
+          "stage": "Late game",
+          "reason": "Late physical damage and evasion; replace if the matchup requires a more urgent counter.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "satanic",
+          "stage": "Late game",
+          "reason": "Late attack-based recovery; needs opportunities to attack.",
+          "importance": "essential"
+        }
+      ],
+      "finalItems": ["phase_boots", "bfury", "manta", "butterfly", "abyssal_blade", "satanic"],
+      "skills": {
+        "sustain": {
+          "first": "juggernaut_blade_fury",
+          "priority": [
+            "juggernaut_blade_fury",
+            "juggernaut_blade_dance",
+            "juggernaut_healing_ward",
+            "juggernaut_omni_slash"
+          ],
+          "explanation": "Prioritize wave clear or efficient resource use for steady experience and farm.",
+          "talentSides": [0, 0, 1, 0],
+          "talentReasons": [
+            "More frequent Healing Ward recovery helps sustain the lane and reset between fights.",
+            "More frequent Omnislash creates additional fighting windows once core damage is ready.",
+            "Blade Fury damage reinforces early-to-midgame area spell pressure.",
+            "A longer Omnislash extends its damage window when targets stay eligible."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "juggernaut_blade_fury",
+              "reason": "Prioritize wave clear or efficient resource use for steady experience and farm."
+            },
+            {
+              "level": 2,
+              "abilityId": "juggernaut_healing_ward",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "juggernaut_blade_dance",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "aggressive": {
+          "first": "juggernaut_blade_fury",
+          "priority": [
+            "juggernaut_blade_fury",
+            "juggernaut_healing_ward",
+            "juggernaut_blade_dance",
+            "juggernaut_omni_slash"
+          ],
+          "explanation": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill.",
+          "talentSides": [1, 0, 1, 1],
+          "talentReasons": [
+            "Building Bladeform stacks sooner favors the farming-and-attack progression.",
+            "More frequent Omnislash creates additional fighting windows once core damage is ready.",
+            "Blade Fury damage reinforces early-to-midgame area spell pressure.",
+            "Attack-based lifesteal supports survival once sustained attacking is possible."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "juggernaut_blade_fury",
+              "reason": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill."
+            },
+            {
+              "level": 2,
+              "abilityId": "juggernaut_healing_ward",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "juggernaut_blade_dance",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "defensive": {
+          "first": "juggernaut_healing_ward",
+          "priority": [
+            "juggernaut_healing_ward",
+            "juggernaut_blade_fury",
+            "juggernaut_blade_dance",
+            "juggernaut_omni_slash"
+          ],
+          "explanation": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane.",
+          "talentSides": [0, 1, 0, 0],
+          "talentReasons": [
+            "More frequent Healing Ward recovery helps sustain the lane and reset between fights.",
+            "Movement during Blade Fury helps stay on a target or retreat from an unsafe fight.",
+            "Critical damage favors the eventual physical attack inventory.",
+            "A longer Omnislash extends its damage window when targets stay eligible."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "juggernaut_healing_ward",
+              "reason": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane."
+            },
+            {
+              "level": 2,
+              "abilityId": "juggernaut_blade_fury",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "juggernaut_blade_dance",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        }
+      },
+      "attributeLevels": [2, 4, 6, 8, 10, 12, 14],
+      "compatibleCounters": ["black_king_bar", "monkey_king_bar", "dust", "bfury", "skadi"],
+      "counterReplacement": "butterfly",
+      "source": {
+        "label": "AegisPath reviewed guide \u00b7 7.41f",
+        "url": "docs/PLANNER.md",
+        "kind": "curated"
+      },
+      "note": "Curated recommendation, not an optimal-build statistic. Purchase order is relative, not a predicted minute timing.",
+      "talentRules": [
+        {
+          "tier": 15,
+          "side": 1,
+          "mechanic": "gap-close",
+          "reason": "Movement during Blade Fury helps stay on a target or retreat from an unsafe fight."
+        }
+      ]
+    },
+    {
+      "id": "25-2",
+      "heroId": 25,
+      "positions": [2],
+      "patch": "7.41f",
+      "title": "Lina \u00b7 Spell core",
+      "preferredStrategy": "sustain",
+      "laneStrength": 3,
+      "advantages": [
+        "Ranged last hits and wave clear.",
+        "Light Strike Array offers follow-up control."
+      ],
+      "starting": {
+        "sustain": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 1,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "mantle",
+              "quantity": 1,
+              "reason": "Intelligence for early spell resources and ranged last hits."
+            },
+            {
+              "itemId": "circlet",
+              "quantity": 1,
+              "reason": "Efficient lane attributes; can be built into Null Talisman."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Keep enough regeneration for stable experience and last hits while preserving resources for the first item."
+        },
+        "aggressive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 1,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "mantle",
+              "quantity": 1,
+              "reason": "Intelligence for early spell resources and ranged last hits."
+            },
+            {
+              "itemId": "circlet",
+              "quantity": 1,
+              "reason": "Efficient lane attributes; can be built into Null Talisman."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            },
+            {
+              "itemId": "faerie_fire",
+              "quantity": 1,
+              "reason": "Small attack bonus and an emergency burst heal during an aggressive trade."
+            }
+          ],
+          "explanation": "Invest in early trading and a realistic kill attempt without dropping basic regeneration."
+        },
+        "defensive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "mantle",
+              "quantity": 1,
+              "reason": "Intelligence for early spell resources and ranged last hits."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            },
+            {
+              "itemId": "flask",
+              "quantity": 1,
+              "reason": "Reserve a larger heal for a safe reset after heavy harassment."
+            }
+          ],
+          "explanation": "Bring extra health recovery, avoid extended trades, and reset before returning for experience."
+        }
+      },
+      "steps": [
+        {
+          "itemId": "tango",
+          "stage": "Laning phase",
+          "reason": "Replenish health recovery as needed; use existing charges before buying more.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "null_talisman",
+          "stage": "Laning phase",
+          "reason": "Complete lane attributes using starting intelligence components; retire this item when major items need the slot.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "boots",
+          "stage": "Laning phase",
+          "reason": "Movement before committing to a boot upgrade.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_stick",
+          "stage": "Laning phase",
+          "reason": "Early reactive sustain against spell casts; avoid delaying the hero\u2019s first major item.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_wand",
+          "stage": "Laning phase",
+          "reason": "Complete the sustain item using the stick and starting branches.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "bottle",
+          "stage": "Laning phase",
+          "reason": "Mid-lane health and mana recovery with rune access.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "cyclone",
+          "stage": "Early game",
+          "reason": "Setup and a self-dispel option for a spell-oriented Lina build.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "ultimate_scepter",
+          "stage": "Midgame",
+          "reason": "Hero-specific spell upgrade; review the unlocked ability below.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "black_king_bar",
+          "stage": "Midgame",
+          "reason": "Personal debuff immunity and magic protection during a committed fight; piercing disables still matter.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "octarine_core",
+          "stage": "Late game",
+          "reason": "Luxury spell uptime after essential protection and utility.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "shivas_guard",
+          "stage": "Late game",
+          "reason": "Armor and area utility with health restoration reduction.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "sheepstick",
+          "stage": "Late game",
+          "reason": "Luxury single-target control after core spell items.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "travel_boots",
+          "stage": "Late game",
+          "reason": "Late map access; upgrade the original boots instead of keeping two boot items.",
+          "importance": "essential"
+        }
+      ],
+      "finalItems": [
+        "travel_boots",
+        "ultimate_scepter",
+        "black_king_bar",
+        "octarine_core",
+        "shivas_guard",
+        "sheepstick"
+      ],
+      "skills": {
+        "sustain": {
+          "first": "lina_dragon_slave",
+          "priority": [
+            "lina_dragon_slave",
+            "lina_fiery_soul",
+            "lina_light_strike_array",
+            "lina_laguna_blade"
+          ],
+          "explanation": "Prioritize wave clear or efficient resource use for steady experience and farm.",
+          "talentSides": [1, 1, 0, 0],
+          "talentReasons": [
+            "More frequent Dragon Slave supports wave clear and repeated spell pressure.",
+            "Light Strike Array damage improves the stun follow-up for the spell-core path.",
+            "More frequent Laguna Blade creates additional burst opportunities.",
+            "A longer Slow Burn duration reinforces the spell-damage path."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "lina_dragon_slave",
+              "reason": "Prioritize wave clear or efficient resource use for steady experience and farm."
+            },
+            {
+              "level": 2,
+              "abilityId": "lina_light_strike_array",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "lina_fiery_soul",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "aggressive": {
+          "first": "lina_dragon_slave",
+          "priority": [
+            "lina_dragon_slave",
+            "lina_light_strike_array",
+            "lina_fiery_soul",
+            "lina_laguna_blade"
+          ],
+          "explanation": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill.",
+          "talentSides": [1, 1, 0, 0],
+          "talentReasons": [
+            "More frequent Dragon Slave supports wave clear and repeated spell pressure.",
+            "Light Strike Array damage improves the stun follow-up for the spell-core path.",
+            "More frequent Laguna Blade creates additional burst opportunities.",
+            "A longer Slow Burn duration reinforces the spell-damage path."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "lina_dragon_slave",
+              "reason": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill."
+            },
+            {
+              "level": 2,
+              "abilityId": "lina_light_strike_array",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "lina_fiery_soul",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "defensive": {
+          "first": "lina_light_strike_array",
+          "priority": [
+            "lina_light_strike_array",
+            "lina_dragon_slave",
+            "lina_fiery_soul",
+            "lina_laguna_blade"
+          ],
+          "explanation": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane.",
+          "talentSides": [1, 0, 0, 0],
+          "talentReasons": [
+            "More frequent Dragon Slave supports wave clear and repeated spell pressure.",
+            "Magic resistance while Fiery Soul is stacked improves personal survival into spell damage.",
+            "More frequent Laguna Blade creates additional burst opportunities.",
+            "A longer Slow Burn duration reinforces the spell-damage path."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "lina_light_strike_array",
+              "reason": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane."
+            },
+            {
+              "level": 2,
+              "abilityId": "lina_dragon_slave",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "lina_fiery_soul",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        }
+      },
+      "attributeLevels": [2, 4, 6, 8, 10, 12, 14],
+      "compatibleCounters": ["black_king_bar", "sphere", "dust", "shivas_guard"],
+      "counterReplacement": "sheepstick",
+      "source": {
+        "label": "AegisPath reviewed guide \u00b7 7.41f",
+        "url": "docs/PLANNER.md",
+        "kind": "curated"
+      },
+      "note": "Curated recommendation, not an optimal-build statistic. Purchase order is relative, not a predicted minute timing.",
+      "talentRules": [
+        {
+          "tier": 15,
+          "side": 0,
+          "mechanic": "magic-damage",
+          "reason": "Magic resistance while Fiery Soul is stacked improves personal survival into spell damage."
+        }
+      ]
+    },
+    {
+      "id": "2-3",
+      "heroId": 2,
+      "positions": [3],
+      "patch": "7.41f",
+      "title": "Axe \u00b7 Initiation",
+      "preferredStrategy": "aggressive",
+      "laneStrength": 3,
+      "advantages": [
+        "Durable frontline against creep and attack pressure.",
+        "Berserker\u2019s Call provides initiation that pierces debuff immunity."
+      ],
+      "starting": {
+        "sustain": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "ring_of_protection",
+              "quantity": 1,
+              "reason": "Starting armor for creep pressure and physical trading."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Keep enough regeneration for stable experience and last hits while preserving resources for the first item."
+        },
+        "aggressive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 1,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "wind_lace",
+              "quantity": 1,
+              "reason": "Extra movement for reaching opponents or leaving a dangerous trade."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Invest in early trading and a realistic kill attempt without dropping basic regeneration."
+        },
+        "defensive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "flask",
+              "quantity": 1,
+              "reason": "Reserve a larger heal for a safe reset after heavy harassment."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Bring extra health recovery, avoid extended trades, and reset before returning for experience."
+        }
+      },
+      "steps": [
+        {
+          "itemId": "tango",
+          "stage": "Laning phase",
+          "reason": "Replenish health recovery as needed; use existing charges before buying more.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "boots",
+          "stage": "Laning phase",
+          "reason": "Movement before committing to a boot upgrade.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_stick",
+          "stage": "Laning phase",
+          "reason": "Early reactive sustain against spell casts; avoid delaying the hero\u2019s first major item.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_wand",
+          "stage": "Laning phase",
+          "reason": "Complete the sustain item using the stick and starting branches.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "phase_boots",
+          "stage": "Early game",
+          "reason": "Armor and movement for melee positioning.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "blink",
+          "stage": "Early game",
+          "reason": "Initiation or safe positioning; recent enemy damage can prevent use.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "blade_mail",
+          "stage": "Midgame",
+          "reason": "Return damage while opponents are forced to attack the frontline; it is not damage immunity.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "black_king_bar",
+          "stage": "Midgame",
+          "reason": "Personal debuff immunity and magic protection during a committed fight; piercing disables still matter.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "shivas_guard",
+          "stage": "Late game",
+          "reason": "Armor and area utility with health restoration reduction.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "heart",
+          "stage": "Late game",
+          "reason": "Luxury durability after initiation and protection.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "overwhelming_blink",
+          "stage": "Late game",
+          "reason": "Upgrade the same Blink Dagger for a late strength-core power spike.",
+          "importance": "essential"
+        }
+      ],
+      "finalItems": [
+        "phase_boots",
+        "overwhelming_blink",
+        "blade_mail",
+        "black_king_bar",
+        "shivas_guard",
+        "heart"
+      ],
+      "skills": {
+        "sustain": {
+          "first": "axe_counter_helix",
+          "priority": [
+            "axe_counter_helix",
+            "axe_berserkers_call",
+            "axe_battle_hunger",
+            "axe_culling_blade"
+          ],
+          "explanation": "Prioritize wave clear or efficient resource use for steady experience and farm.",
+          "talentSides": [0, 0, 1, 0],
+          "talentReasons": [
+            "A longer successful Culling Blade speed buff helps the team reposition after a kill.",
+            "Battle Hunger damage strengthens sustained harassment.",
+            "Counter Helix damage reinforces area damage while the enemy attacks Axe.",
+            "A wider Call makes multi-target initiation more forgiving."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "axe_counter_helix",
+              "reason": "Prioritize wave clear or efficient resource use for steady experience and farm."
+            },
+            {
+              "level": 2,
+              "abilityId": "axe_berserkers_call",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "axe_battle_hunger",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "aggressive": {
+          "first": "axe_battle_hunger",
+          "priority": [
+            "axe_counter_helix",
+            "axe_berserkers_call",
+            "axe_battle_hunger",
+            "axe_culling_blade"
+          ],
+          "explanation": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill.",
+          "talentSides": [1, 0, 1, 1],
+          "talentReasons": [
+            "Movement from active Battle Hunger improves pursuit and retreat while the debuff remains active.",
+            "Battle Hunger damage strengthens sustained harassment.",
+            "Counter Helix damage reinforces area damage while the enemy attacks Axe.",
+            "Culling Blade damage improves the execution tool rather than widening initiation."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "axe_battle_hunger",
+              "reason": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill."
+            },
+            {
+              "level": 2,
+              "abilityId": "axe_counter_helix",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "axe_berserkers_call",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "defensive": {
+          "first": "axe_berserkers_call",
+          "priority": [
+            "axe_counter_helix",
+            "axe_berserkers_call",
+            "axe_battle_hunger",
+            "axe_culling_blade"
+          ],
+          "explanation": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane.",
+          "talentSides": [0, 1, 0, 0],
+          "talentReasons": [
+            "A longer successful Culling Blade speed buff helps the team reposition after a kill.",
+            "Additional armor during Call improves survival while enemies attack the initiator.",
+            "Strength favors frontline durability when staying alive matters more than extra spin damage.",
+            "A wider Call makes multi-target initiation more forgiving."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "axe_berserkers_call",
+              "reason": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane."
+            },
+            {
+              "level": 2,
+              "abilityId": "axe_counter_helix",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "axe_battle_hunger",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        }
+      },
+      "attributeLevels": [2, 4, 6, 8, 10, 12, 14],
+      "compatibleCounters": ["black_king_bar", "pipe", "lotus_orb", "dust", "shivas_guard"],
+      "counterReplacement": "heart",
+      "source": {
+        "label": "AegisPath reviewed guide \u00b7 7.41f",
+        "url": "docs/PLANNER.md",
+        "kind": "curated"
+      },
+      "note": "Curated recommendation, not an optimal-build statistic. Purchase order is relative, not a predicted minute timing.",
+      "talentRules": [
+        {
+          "tier": 15,
+          "side": 1,
+          "mechanic": "attacks",
+          "reason": "Additional armor during Call improves survival while enemies attack the initiator."
+        }
+      ]
+    },
+    {
+      "id": "86-4",
+      "heroId": 86,
+      "positions": [4, 5],
+      "patch": "7.41f",
+      "title": "Rubick \u00b7 Support utility",
+      "preferredStrategy": "sustain",
+      "laneStrength": 2,
+      "advantages": [
+        "Telekinesis supplies follow-up control.",
+        "Fade Bolt reduces attack damage while trading."
+      ],
+      "starting": {
+        "sustain": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "ward_sentry",
+              "quantity": 1,
+              "reason": "Support detection for contested lane vision; coordinate team stock."
+            },
+            {
+              "itemId": "enchanted_mango",
+              "quantity": 1,
+              "reason": "Immediate mana for an extra control or damage spell."
+            },
+            {
+              "itemId": "clarity",
+              "quantity": 2,
+              "reason": "Mana replenishment while safely away from enemy damage."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Keep enough regeneration for stable experience and last hits while preserving resources for the first item."
+        },
+        "aggressive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 1,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "ward_sentry",
+              "quantity": 1,
+              "reason": "Support detection for contested lane vision; coordinate team stock."
+            },
+            {
+              "itemId": "enchanted_mango",
+              "quantity": 3,
+              "reason": "Immediate mana for an extra control or damage spell."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            },
+            {
+              "itemId": "blood_grenade",
+              "quantity": 1,
+              "reason": "A limited offensive slow to coordinate a support kill attempt."
+            }
+          ],
+          "explanation": "Invest in early trading and a realistic kill attempt without dropping basic regeneration."
+        },
+        "defensive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "ward_sentry",
+              "quantity": 1,
+              "reason": "Support detection for contested lane vision; coordinate team stock."
+            },
+            {
+              "itemId": "flask",
+              "quantity": 1,
+              "reason": "Reserve a larger heal for a safe reset after heavy harassment."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            },
+            {
+              "itemId": "clarity",
+              "quantity": 1,
+              "reason": "Mana replenishment while safely away from enemy damage."
+            }
+          ],
+          "explanation": "Bring extra health recovery, avoid extended trades, and reset before returning for experience."
+        }
+      },
+      "steps": [
+        {
+          "itemId": "tango",
+          "stage": "Laning phase",
+          "reason": "Replenish health recovery as needed; use existing charges before buying more.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "boots",
+          "stage": "Laning phase",
+          "reason": "Movement before committing to a boot upgrade.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_stick",
+          "stage": "Laning phase",
+          "reason": "Early reactive sustain against spell casts; avoid delaying the hero\u2019s first major item.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_wand",
+          "stage": "Laning phase",
+          "reason": "Complete the sustain item using the stick and starting branches.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "arcane_boots",
+          "stage": "Early game",
+          "reason": "Affordable mana utility for repeated support spells.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "force_staff",
+          "stage": "Early game",
+          "reason": "Reposition yourself or an eligible ally; does not dispel silence or guarantee escape from every root.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "glimmer_cape",
+          "stage": "Midgame",
+          "reason": "Magic protection and concealment for an eligible ally; detection still reveals invisibility.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "aether_lens",
+          "stage": "Midgame",
+          "reason": "Cast-range positioning for support spells.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "ultimate_scepter",
+          "stage": "Late game",
+          "reason": "Hero-specific spell upgrade; review the unlocked ability below.",
+          "importance": "luxury"
+        },
+        {
+          "itemId": "octarine_core",
+          "stage": "Late game",
+          "reason": "Luxury spell uptime after essential protection and utility.",
+          "importance": "luxury"
+        },
+        {
+          "itemId": "aghanims_shard",
+          "stage": "Late game",
+          "reason": "Optional late utility upgrade, consumed rather than occupying a permanent final slot.",
+          "importance": "luxury"
+        }
+      ],
+      "finalItems": [
+        "arcane_boots",
+        "force_staff",
+        "glimmer_cape",
+        "aether_lens",
+        "ultimate_scepter",
+        "octarine_core"
+      ],
+      "skills": {
+        "sustain": {
+          "first": "rubick_fade_bolt",
+          "priority": [
+            "rubick_fade_bolt",
+            "rubick_arcane_supremacy",
+            "rubick_telekinesis",
+            "rubick_spell_steal"
+          ],
+          "explanation": "Prioritize wave clear or efficient resource use for steady experience and farm.",
+          "talentSides": [0, 0, 1, 0],
+          "talentReasons": [
+            "More frequent Telekinesis improves control and disengagement.",
+            "Lower stolen-spell mana costs support repeated spell utility on a support economy.",
+            "Landing damage adds follow-up burst to Telekinesis control.",
+            "Curiosity bonuses improve the innate\u2019s spell-related scaling."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "rubick_fade_bolt",
+              "reason": "Prioritize wave clear or efficient resource use for steady experience and farm."
+            },
+            {
+              "level": 2,
+              "abilityId": "rubick_telekinesis",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "rubick_arcane_supremacy",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "aggressive": {
+          "first": "rubick_telekinesis",
+          "priority": [
+            "rubick_fade_bolt",
+            "rubick_telekinesis",
+            "rubick_arcane_supremacy",
+            "rubick_spell_steal"
+          ],
+          "explanation": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill.",
+          "talentSides": [1, 0, 1, 1],
+          "talentReasons": [
+            "Extra health reduces the risk of dying before casting a save or stolen spell.",
+            "Lower stolen-spell mana costs support repeated spell utility on a support economy.",
+            "Landing damage adds follow-up burst to Telekinesis control.",
+            "Stolen-spell amplification favors late damage after protection is secured."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "rubick_telekinesis",
+              "reason": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill."
+            },
+            {
+              "level": 2,
+              "abilityId": "rubick_fade_bolt",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "rubick_arcane_supremacy",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "defensive": {
+          "first": "rubick_fade_bolt",
+          "priority": [
+            "rubick_fade_bolt",
+            "rubick_telekinesis",
+            "rubick_arcane_supremacy",
+            "rubick_spell_steal"
+          ],
+          "explanation": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane.",
+          "talentSides": [0, 1, 0, 0],
+          "talentReasons": [
+            "More frequent Telekinesis improves control and disengagement.",
+            "More frequent Fade Bolt improves wave clear and repeated damage reduction.",
+            "Stronger Fade Bolt reduction helps blunt enemy damage.",
+            "Curiosity bonuses improve the innate\u2019s spell-related scaling."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "rubick_fade_bolt",
+              "reason": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane."
+            },
+            {
+              "level": 2,
+              "abilityId": "rubick_telekinesis",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "rubick_arcane_supremacy",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        }
+      },
+      "attributeLevels": [2, 4, 6, 8, 10, 12, 14],
+      "compatibleCounters": [
+        "glimmer_cape",
+        "force_staff",
+        "ghost",
+        "lotus_orb",
+        "aeon_disk",
+        "dust"
+      ],
+      "counterReplacement": "ultimate_scepter",
+      "source": {
+        "label": "AegisPath reviewed guide \u00b7 7.41f",
+        "url": "docs/PLANNER.md",
+        "kind": "curated"
+      },
+      "note": "Curated recommendation, not an optimal-build statistic. Support luxury items are eventual goals; vision, detection, and affordable saves take priority.",
+      "talentRules": [
+        {
+          "tier": 10,
+          "side": 1,
+          "mechanic": "unit-target",
+          "reason": "Extra health reduces the risk of dying before casting a save or stolen spell."
+        }
+      ]
+    },
+    {
+      "id": "5-4",
+      "heroId": 5,
+      "positions": [4, 5],
+      "patch": "7.41f",
+      "title": "Crystal Maiden \u00b7 Support utility",
+      "preferredStrategy": "sustain",
+      "laneStrength": 2,
+      "advantages": [
+        "Frostbite controls targets for a lane partner.",
+        "Arcane Aura helps allied spell use."
+      ],
+      "starting": {
+        "sustain": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "ward_sentry",
+              "quantity": 1,
+              "reason": "Support detection for contested lane vision; coordinate team stock."
+            },
+            {
+              "itemId": "enchanted_mango",
+              "quantity": 1,
+              "reason": "Immediate mana for an extra control or damage spell."
+            },
+            {
+              "itemId": "clarity",
+              "quantity": 2,
+              "reason": "Mana replenishment while safely away from enemy damage."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Keep enough regeneration for stable experience and last hits while preserving resources for the first item."
+        },
+        "aggressive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 1,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "ward_sentry",
+              "quantity": 1,
+              "reason": "Support detection for contested lane vision; coordinate team stock."
+            },
+            {
+              "itemId": "enchanted_mango",
+              "quantity": 3,
+              "reason": "Immediate mana for an extra control or damage spell."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            },
+            {
+              "itemId": "blood_grenade",
+              "quantity": 1,
+              "reason": "A limited offensive slow to coordinate a support kill attempt."
+            }
+          ],
+          "explanation": "Invest in early trading and a realistic kill attempt without dropping basic regeneration."
+        },
+        "defensive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "ward_sentry",
+              "quantity": 1,
+              "reason": "Support detection for contested lane vision; coordinate team stock."
+            },
+            {
+              "itemId": "flask",
+              "quantity": 1,
+              "reason": "Reserve a larger heal for a safe reset after heavy harassment."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            },
+            {
+              "itemId": "clarity",
+              "quantity": 1,
+              "reason": "Mana replenishment while safely away from enemy damage."
+            }
+          ],
+          "explanation": "Bring extra health recovery, avoid extended trades, and reset before returning for experience."
+        }
+      },
+      "steps": [
+        {
+          "itemId": "tango",
+          "stage": "Laning phase",
+          "reason": "Replenish health recovery as needed; use existing charges before buying more.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "boots",
+          "stage": "Laning phase",
+          "reason": "Movement before committing to a boot upgrade.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_stick",
+          "stage": "Laning phase",
+          "reason": "Early reactive sustain against spell casts; avoid delaying the hero\u2019s first major item.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_wand",
+          "stage": "Laning phase",
+          "reason": "Complete the sustain item using the stick and starting branches.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "arcane_boots",
+          "stage": "Early game",
+          "reason": "Affordable mana utility for repeated support spells.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "glimmer_cape",
+          "stage": "Early game",
+          "reason": "Magic protection and concealment for an eligible ally; detection still reveals invisibility.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "force_staff",
+          "stage": "Midgame",
+          "reason": "Reposition yourself or an eligible ally; does not dispel silence or guarantee escape from every root.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "blink",
+          "stage": "Midgame",
+          "reason": "Initiation or safe positioning; recent enemy damage can prevent use.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "black_king_bar",
+          "stage": "Late game",
+          "reason": "Personal debuff immunity and magic protection during a committed fight; piercing disables still matter.",
+          "importance": "luxury"
+        },
+        {
+          "itemId": "ultimate_scepter",
+          "stage": "Late game",
+          "reason": "Hero-specific spell upgrade; review the unlocked ability below.",
+          "importance": "luxury"
+        },
+        {
+          "itemId": "aghanims_shard",
+          "stage": "Late game",
+          "reason": "Optional late utility upgrade, consumed rather than occupying a permanent final slot.",
+          "importance": "luxury"
+        }
+      ],
+      "finalItems": [
+        "arcane_boots",
+        "force_staff",
+        "glimmer_cape",
+        "blink",
+        "black_king_bar",
+        "ultimate_scepter"
+      ],
+      "skills": {
+        "sustain": {
+          "first": "crystal_maiden_crystal_nova",
+          "priority": [
+            "crystal_maiden_crystal_nova",
+            "crystal_maiden_brilliance_aura",
+            "crystal_maiden_frostbite",
+            "crystal_maiden_freezing_field"
+          ],
+          "explanation": "Prioritize wave clear or efficient resource use for steady experience and farm.",
+          "talentSides": [0, 0, 1, 0],
+          "talentReasons": [
+            "Extra health helps the support survive long enough to use control and saves.",
+            "Extra Frostbite reach enables control from a safer position.",
+            "Freezing Field damage rewards a safe, protected channeling opportunity.",
+            "Longer Frostbite control helps allies follow up on an eligible target."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "crystal_maiden_crystal_nova",
+              "reason": "Prioritize wave clear or efficient resource use for steady experience and farm."
+            },
+            {
+              "level": 2,
+              "abilityId": "crystal_maiden_frostbite",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "crystal_maiden_brilliance_aura",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "aggressive": {
+          "first": "crystal_maiden_frostbite",
+          "priority": [
+            "crystal_maiden_crystal_nova",
+            "crystal_maiden_frostbite",
+            "crystal_maiden_brilliance_aura",
+            "crystal_maiden_freezing_field"
+          ],
+          "explanation": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill.",
+          "talentSides": [1, 0, 1, 1],
+          "talentReasons": [
+            "Intelligence increases spell resources for repeated utility.",
+            "Extra Frostbite reach enables control from a safer position.",
+            "Freezing Field damage rewards a safe, protected channeling opportunity.",
+            "Crystal Nova damage adds immediate area burst without committing to a long channel."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "crystal_maiden_frostbite",
+              "reason": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill."
+            },
+            {
+              "level": 2,
+              "abilityId": "crystal_maiden_crystal_nova",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "crystal_maiden_brilliance_aura",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "defensive": {
+          "first": "crystal_maiden_frostbite",
+          "priority": [
+            "crystal_maiden_frostbite",
+            "crystal_maiden_crystal_nova",
+            "crystal_maiden_brilliance_aura",
+            "crystal_maiden_freezing_field"
+          ],
+          "explanation": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane.",
+          "talentSides": [0, 1, 0, 0],
+          "talentReasons": [
+            "Extra health helps the support survive long enough to use control and saves.",
+            "More frequent Crystal Nova improves wave clear and area slow uptime.",
+            "A stronger Glacial Guard barrier improves physical protection from mana spent.",
+            "Longer Frostbite control helps allies follow up on an eligible target."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "crystal_maiden_frostbite",
+              "reason": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane."
+            },
+            {
+              "level": 2,
+              "abilityId": "crystal_maiden_crystal_nova",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "crystal_maiden_brilliance_aura",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        }
+      },
+      "attributeLevels": [2, 4, 6, 8, 10, 12, 14],
+      "compatibleCounters": [
+        "glimmer_cape",
+        "force_staff",
+        "ghost",
+        "lotus_orb",
+        "aeon_disk",
+        "dust"
+      ],
+      "counterReplacement": "ultimate_scepter",
+      "source": {
+        "label": "AegisPath reviewed guide \u00b7 7.41f",
+        "url": "docs/PLANNER.md",
+        "kind": "curated"
+      },
+      "note": "Curated recommendation, not an optimal-build statistic. Support luxury items are eventual goals; vision, detection, and affordable saves take priority.",
+      "talentRules": [
+        {
+          "tier": 10,
+          "side": 0,
+          "mechanic": "unit-target",
+          "reason": "Extra health helps the support survive long enough to use control and saves."
+        }
+      ]
+    },
+    {
+      "id": "82-2",
+      "heroId": 82,
+      "positions": [2],
+      "patch": "7.41f",
+      "title": "Meepo \u00b7 Clone farming",
+      "preferredStrategy": "sustain",
+      "laneStrength": 2,
+      "advantages": [
+        "Poof supplies farming damage and clone movement.",
+        "Earthbind enables coordinated control."
+      ],
+      "starting": {
+        "sustain": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 1,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "slippers",
+              "quantity": 1,
+              "reason": "Starting agility for damage and last hitting."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            },
+            {
+              "itemId": "enchanted_mango",
+              "quantity": 1,
+              "reason": "Immediate mana for an extra control or damage spell."
+            }
+          ],
+          "explanation": "Keep enough regeneration for stable experience and last hits while preserving resources for the first item."
+        },
+        "aggressive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 1,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "slippers",
+              "quantity": 1,
+              "reason": "Starting agility for damage and last hitting."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            },
+            {
+              "itemId": "enchanted_mango",
+              "quantity": 1,
+              "reason": "Immediate mana for an extra control or damage spell."
+            }
+          ],
+          "explanation": "Invest in early trading and a realistic kill attempt without dropping basic regeneration."
+        },
+        "defensive": {
+          "purchases": [
+            {
+              "itemId": "tango",
+              "quantity": 2,
+              "reason": "Regeneration for repeated lane trades; each purchased set contains three charges."
+            },
+            {
+              "itemId": "flask",
+              "quantity": 1,
+              "reason": "Reserve a larger heal for a safe reset after heavy harassment."
+            },
+            {
+              "itemId": "quelling_blade",
+              "quantity": 1,
+              "reason": "Improve melee last hitting and keep a path toward farming components."
+            },
+            {
+              "itemId": "branches",
+              "quantity": 2,
+              "reason": "Cheap attributes; two branches can be reused in Magic Wand."
+            }
+          ],
+          "explanation": "Bring extra health recovery, avoid extended trades, and reset before returning for experience."
+        }
+      },
+      "steps": [
+        {
+          "itemId": "tango",
+          "stage": "Laning phase",
+          "reason": "Replenish health recovery as needed; use existing charges before buying more.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "boots",
+          "stage": "Laning phase",
+          "reason": "Movement before committing to a boot upgrade.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_stick",
+          "stage": "Laning phase",
+          "reason": "Early reactive sustain against spell casts; avoid delaying the hero\u2019s first major item.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "magic_wand",
+          "stage": "Laning phase",
+          "reason": "Complete the sustain item using the stick and starting branches.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "power_treads",
+          "stage": "Early game",
+          "reason": "Attack speed and toggled attributes for farming.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "diffusal_blade",
+          "stage": "Early game",
+          "reason": "A first major control and attack-progression item.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "blink",
+          "stage": "Midgame",
+          "reason": "Initiation or safe positioning; recent enemy damage can prevent use.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "ultimate_scepter",
+          "stage": "Midgame",
+          "reason": "Hero-specific spell upgrade; review the unlocked ability below.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "skadi",
+          "stage": "Late game",
+          "reason": "Late attributes and attack-based health restoration reduction.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "disperser",
+          "stage": "Late game",
+          "reason": "Upgrade the existing Diffusal Blade into a late movement and dispel tool.",
+          "importance": "essential"
+        },
+        {
+          "itemId": "butterfly",
+          "stage": "Late game",
+          "reason": "Late physical damage and evasion; replace if the matchup requires a more urgent counter.",
+          "importance": "essential"
+        }
+      ],
+      "finalItems": [
+        "power_treads",
+        "disperser",
+        "blink",
+        "ultimate_scepter",
+        "skadi",
+        "butterfly"
+      ],
+      "skills": {
+        "sustain": {
+          "first": "meepo_poof",
+          "priority": ["meepo_poof", "meepo_ransack", "meepo_earthbind", "meepo_divided_we_stand"],
+          "explanation": "Prioritize wave clear or efficient resource use for steady experience and farm.",
+          "talentSides": [1, 0, 1, 1],
+          "talentReasons": [
+            "More frequent Earthbind improves repeated control.",
+            "Evasion improves survival against eligible attacks.",
+            "Ransack health steal improves attack-based recovery.",
+            "A shorter Poof cast improves responsiveness when repositioning or combining clone damage."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "meepo_poof",
+              "reason": "Prioritize wave clear or efficient resource use for steady experience and farm."
+            },
+            {
+              "level": 2,
+              "abilityId": "meepo_ransack",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "meepo_earthbind",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "aggressive": {
+          "first": "meepo_earthbind",
+          "priority": ["meepo_poof", "meepo_earthbind", "meepo_ransack", "meepo_divided_we_stand"],
+          "explanation": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill.",
+          "talentSides": [0, 0, 1, 1],
+          "talentReasons": [
+            "Strength supplies lane and clone durability.",
+            "Evasion improves survival against eligible attacks.",
+            "Ransack health steal improves attack-based recovery.",
+            "A shorter Poof cast improves responsiveness when repositioning or combining clone damage."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "meepo_earthbind",
+              "reason": "Secure early control and damage for coordinated trades; use the lane partner rather than forcing a solo kill."
+            },
+            {
+              "level": 2,
+              "abilityId": "meepo_poof",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "meepo_ransack",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        },
+        "defensive": {
+          "first": "meepo_ransack",
+          "priority": ["meepo_ransack", "meepo_poof", "meepo_earthbind", "meepo_divided_we_stand"],
+          "explanation": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane.",
+          "talentSides": [1, 0, 0, 0],
+          "talentReasons": [
+            "More frequent Earthbind improves repeated control.",
+            "Evasion improves survival against eligible attacks.",
+            "True Strike on Earthbound targets helps attacks connect against evasion while the root applies.",
+            "Additional health favors survival across the clone group."
+          ],
+          "opening": [
+            {
+              "level": 1,
+              "abilityId": "meepo_ransack",
+              "reason": "Take an early control or sustain tool to disengage or recover; do not interpret this as a favorable lane."
+            },
+            {
+              "level": 2,
+              "abilityId": "meepo_poof",
+              "reason": "Keep an early point in a complementary lane tool instead of delaying all utility until after the first maxed ability."
+            },
+            {
+              "level": 4,
+              "abilityId": "meepo_earthbind",
+              "reason": "Complete the basic lane toolkit before committing the remaining ranks to this variant\u2019s priority."
+            }
+          ]
+        }
+      },
+      "attributeLevels": [2, 4, 6, 8, 10, 12, 14],
+      "compatibleCounters": ["monkey_king_bar", "dust", "skadi"],
+      "counterReplacement": "butterfly",
+      "source": {
+        "label": "AegisPath reviewed guide \u00b7 7.41f",
+        "url": "docs/PLANNER.md",
+        "kind": "curated"
+      },
+      "note": "Curated recommendation, not an optimal-build statistic. Purchase order is relative, not a predicted minute timing.",
+      "talentRules": [
+        {
+          "tier": 20,
+          "side": 0,
+          "mechanic": "evasion",
+          "reason": "True Strike on Earthbound targets helps attacks connect against evasion while the root applies."
+        }
+      ]
+    }
+  ],
+  "counterRules": [
+    {
+      "id": "spell-protection",
+      "itemId": "black_king_bar",
+      "roles": [1, 2, 3],
+      "mechanics": ["magic-damage", "non-piercing-disable", "dispellable-silence"],
+      "minimumSeverity": 2,
+      "priority": 90,
+      "reason": "Protect a core\u2019s committed fighting window from the named non-piercing spells.",
+      "limitations": "Does not prevent piercing disables such as Berserker\u2019s Call. It is not complete damage immunity.",
+      "replaces": null,
+      "stage": "Early game"
+    },
+    {
+      "id": "support-magic-save",
+      "itemId": "glimmer_cape",
+      "roles": [4, 5],
+      "mechanics": ["magic-damage"],
+      "minimumSeverity": 2,
+      "priority": 100,
+      "reason": "Prioritize affordable magic protection and an ally save against the named spell damage.",
+      "limitations": "Detection defeats concealment; the protection is not an answer to every damage type.",
+      "replaces": null,
+      "stage": "Early game"
+    },
+    {
+      "id": "support-reposition",
+      "itemId": "force_staff",
+      "roles": [4, 5],
+      "mechanics": ["gap-close"],
+      "minimumSeverity": 2,
+      "priority": 95,
+      "reason": "Create distance for yourself or an eligible ally after the named initiation.",
+      "limitations": "Does not dispel silence and cannot force a target out of every root or movement restriction.",
+      "replaces": null,
+      "stage": "Early game"
+    },
+    {
+      "id": "support-attacks",
+      "itemId": "ghost",
+      "roles": [4, 5],
+      "mechanics": ["attacks"],
+      "minimumSeverity": 3,
+      "priority": 90,
+      "reason": "Temporary ethereal protection can prevent physical attacks on the support.",
+      "limitations": "Prevents your own attacks and increases incoming magic vulnerability; avoid into severe magical burst.",
+      "replaces": null,
+      "stage": "Midgame",
+      "excludesMechanics": ["magic-damage"]
+    },
+    {
+      "id": "detection",
+      "itemId": "dust",
+      "roles": [1, 2, 3, 4, 5],
+      "mechanics": ["invisibility"],
+      "minimumSeverity": 2,
+      "priority": 110,
+      "reason": "Carry detection for the named invisibility source and coordinate sentries with the team.",
+      "limitations": "Detection does not reveal every hidden state, disable invulnerability, or replace a Gem permanently.",
+      "replaces": null,
+      "stage": "Laning phase"
+    },
+    {
+      "id": "attack-accuracy",
+      "itemId": "monkey_king_bar",
+      "roles": [1, 2],
+      "mechanics": ["evasion"],
+      "minimumSeverity": 2,
+      "priority": 95,
+      "reason": "Accuracy makes an attack-based core\u2019s damage more reliable against the named evasion.",
+      "limitations": "Not every attack is guaranteed to connect; this is not an option for the spell-oriented Lina guide.",
+      "replaces": null,
+      "stage": "Late game"
+    },
+    {
+      "id": "support-dispel",
+      "itemId": "lotus_orb",
+      "roles": [4, 5],
+      "mechanics": ["dispellable-silence"],
+      "minimumSeverity": 3,
+      "priority": 94,
+      "reason": "A basic dispel on an eligible ally helps answer the named removable silence.",
+      "limitations": "Does not remove mute or an undispellable effect; spell reflection is not spell blocking. Expensive: buy initial saves first.",
+      "replaces": null,
+      "stage": "Late game"
+    },
+    {
+      "id": "team-pipe",
+      "itemId": "pipe",
+      "roles": [3],
+      "mechanics": ["magic-damage"],
+      "minimumSeverity": 3,
+      "priority": 85,
+      "reason": "Add team magic protection for selected allies rather than only protecting the initiating core.",
+      "limitations": "The barrier is for magic damage, not pure or physical damage. Coordinate before duplicating team auras.",
+      "replaces": null,
+      "stage": "Midgame"
+    },
+    {
+      "id": "targeted-pickoff",
+      "itemId": "sphere",
+      "roles": [1, 2, 3],
+      "mechanics": ["unit-target"],
+      "minimumSeverity": 3,
+      "priority": 75,
+      "reason": "A spell block can absorb an eligible targeted spell when the block is available.",
+      "limitations": "Can be removed by another eligible spell and does not block ground-targeted abilities.",
+      "replaces": null,
+      "stage": "Late game"
+    },
+    {
+      "id": "support-pickoff",
+      "itemId": "aeon_disk",
+      "roles": [4, 5],
+      "mechanics": ["unit-target", "gap-close"],
+      "minimumSeverity": 3,
+      "priority": 72,
+      "reason": "A late automatic protection window can help survive sudden pickoff.",
+      "limitations": "Long cooldown and dispel interactions limit reliability; this is a luxury after low-cost team utility.",
+      "replaces": null,
+      "stage": "Late game"
+    },
+    {
+      "id": "illusion-cleave",
+      "itemId": "bfury",
+      "roles": [1],
+      "mechanics": ["illusions"],
+      "minimumSeverity": 2,
+      "priority": 70,
+      "reason": "The existing melee cleave farming item also helps clear the named illusion army.",
+      "limitations": "Cleave is not a way to identify the real hero and does not prevent illusion generation.",
+      "replaces": null,
+      "stage": "Midgame"
+    },
+    {
+      "id": "armor-heal-reduction",
+      "itemId": "shivas_guard",
+      "roles": [2, 3],
+      "mechanics": ["healing"],
+      "minimumSeverity": 2,
+      "priority": 80,
+      "reason": "Area health restoration reduction helps limit the named regeneration source.",
+      "limitations": "It does not cancel Shallow Grave or prevent all incoming heals.",
+      "replaces": null,
+      "stage": "Midgame"
+    },
+    {
+      "id": "attack-heal-reduction",
+      "itemId": "skadi",
+      "roles": [1, 2],
+      "mechanics": ["healing"],
+      "minimumSeverity": 2,
+      "priority": 80,
+      "reason": "Attack-based health restoration reduction helps limit the named sustain.",
+      "limitations": "Requires applying attacks to the affected target; it does not remove grave-style death prevention.",
+      "replaces": null,
+      "stage": "Midgame"
+    }
+  ]
+}
